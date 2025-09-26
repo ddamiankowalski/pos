@@ -1,1 +1,16 @@
-I am dashboard
+<div class="flex h-screen">
+  <!-- Sidebar (hidden on mobile) -->
+  <div class="hidden md:block w-64 bg-gray-800 text-white p-4">
+    <h2 class="text-xl font-bold mb-4">Menu</h2>
+    <p-menu [model]="items" />
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 bg-gray-100 p-6 overflow-auto">
+    <h1 class="text-2xl font-semibold mb-4">Main Content</h1>
+    <p>
+      On mobile, the sidebar is hidden, so this content takes full width.
+      On larger screens (md+), the sidebar appears with fixed width.
+    </p>
+  </div>
+</div>
