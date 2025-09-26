@@ -1,6 +1,16 @@
 <div class="flex h-screen">
   <!-- Sidebar -->
   <div class="hidden md:block w-80 bg-primary-500 text-primary-50 p-2">
+    <div class="flex gap-2 items-center mb-4 mt-2">
+      <p-avatar
+        class="flex justify-content items-center ml-3"
+        label="P"
+        size="normal"
+        [style]="{ 'background-color': '#ece9fc', color: '#2a1261' }"
+      />
+      <p>Joanna Izydorczyk</p>
+    </div>
+
     <div
       class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
     >
@@ -12,7 +22,7 @@
     >
       <i class="pi pi-bookmark mr-1" style="font-size: 1rem"></i>
 
-      Bookmarks
+      Orders
     </div>
     <div
       class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
@@ -22,7 +32,6 @@
       Team
     </div>
   </div>
-
 
   <!-- Content -->
   <div class="flex-1 p-6 overflow-auto bg-neutral-50 text-primary-900">
