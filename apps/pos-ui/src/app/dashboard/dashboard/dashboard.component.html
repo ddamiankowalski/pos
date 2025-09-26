@@ -22,23 +22,9 @@
       </div>
     </div>
 
-    <!-- Settings -->
-    <div class="flex flex-col px-3">
-      <span class="text-xs mb-2 text-primary-200">SETTINGS</span>
-
-      <div class="flex gap-2 items-center">
-        <div class="flex gap-2 items-center">
-          <p-toggleswitch (onChange)="onThemeClick()" />
-          <span class="text-sm text-primary-100">{{
-            isDark() ? 'Dark' : 'Light'
-          }}</span>
-        </div>
-      </div>
-    </div>
-
     <!-- Menu -->
     <div class="flex flex-col px-3">
-      <span class="text-xs mb-2 text-primary-200">MODULES</span>
+      <span class="text-xs mb-2 text-primary-300">MODULES</span>
 
       <div class="flex flex-col">
         <div
@@ -58,6 +44,20 @@
         >
           <i class="pi pi-users mr-1" style="font-size: 1rem"></i>
           Team
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div class="flex flex-col px-3">
+      <span class="text-xs mb-2 text-primary-300">SETTINGS</span>
+
+      <div class="flex gap-2 items-center">
+        <div class="flex gap-2 items-center">
+          <p-toggleswitch [ngModel]="isDark()" (onChange)="onThemeClick()" />
+          <span class="text-sm text-primary-100">{{
+            isDark() ? 'Dark' : 'Light'
+          }}</span>
         </div>
       </div>
     </div>
