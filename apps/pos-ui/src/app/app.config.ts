@@ -16,6 +16,11 @@ export const appConfig: ApplicationConfig = {
     provideRouter(appRoutes),
     provideZonelessChangeDetection(),
     provideAnimationsAsync(),
-    providePrimeNG({ theme: { preset: ThemePreset } }),
+    providePrimeNG({
+      theme: {
+        preset: ThemePreset,
+        options: { darkModeSelector: '.pos-dark' },
+      },
+    }),
   ],
 };
