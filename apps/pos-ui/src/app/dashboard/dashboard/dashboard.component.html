@@ -1,9 +1,10 @@
 <div class="flex h-screen">
   <!-- Sidebar -->
   <div
-    class="hidden md:block w-80 bg-primary-500 text-primary-50 p-2 font-medium"
+    class="hidden gap-6 md:flex flex-col w-80 bg-primary-500 text-primary-50 p-2 font-medium"
   >
-    <div class="flex gap-3 items-center mb-8 mt-4">
+    <!-- User -->
+    <div class="flex gap-3 items-center mb-2 mt-4">
       <p-avatar
         class="flex justify-content items-center ml-3 min-w-[3rem]"
         label="P"
@@ -11,38 +12,46 @@
         [style]="{ 'background-color': '#ece9fc', color: '#2a1261' }"
       />
 
-      <div class="flex overflow-hidden">
-        <div class="flex flex-col overflow-hidden">
-          <p class="text-primary-50 text-ellipsis overflow-hidden">
-            Joanna Izydorczyk
-          </p>
-          <p class="text-primary-200 text-sm text-ellipsis overflow-hidden">
-            joanna.izyydorczyk@gmail.com
-          </p>
-        </div>
-        <p-button icon="pi pi-ellipsis-v" [rounded]="true" [text]="true" />
+      <div class="flex flex-col overflow-hidden">
+        <p class="text-primary-50 text-ellipsis overflow-hidden">
+          Joanna Izydorczyk
+        </p>
+        <p class="text-primary-200 text-sm text-ellipsis overflow-hidden">
+          joanna.izyydorczyk@gmail.com
+        </p>
       </div>
     </div>
 
-    <div
-      class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
-    >
-      <i class="pi pi-home mr-1" style="font-size: 1rem"></i>
-      Dashboard
+    <!-- Settings -->
+    <div class="flex gap-2 items-center px-3">
+      <div class="flex gap-2 items-center">
+        <p-toggleswitch (onChange)="onThemeClick()" />
+        <span class="text-sm text-primary-100">{{
+          isDark() ? 'Dark' : 'Light'
+        }}</span>
+      </div>
     </div>
-    <div
-      class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
-    >
-      <i class="pi pi-bookmark mr-1" style="font-size: 1rem"></i>
 
-      Orders
-    </div>
-    <div
-      class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
-    >
-      <i class="pi pi-users mr-1" style="font-size: 1rem"></i>
-
-      Team
+    <!-- Menu -->
+    <div class="flex flex-col">
+      <div
+        class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
+      >
+        <i class="pi pi-home mr-1" style="font-size: 1rem"></i>
+        Dashboard
+      </div>
+      <div
+        class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
+      >
+        <i class="pi pi-bookmark mr-1" style="font-size: 1rem"></i>
+        Orders
+      </div>
+      <div
+        class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
+      >
+        <i class="pi pi-users mr-1" style="font-size: 1rem"></i>
+        Team
+      </div>
     </div>
   </div>
 

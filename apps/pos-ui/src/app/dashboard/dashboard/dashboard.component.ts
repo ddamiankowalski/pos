@@ -1,29 +1,34 @@
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
-import { PRIME_NG_CONFIG } from 'primeng/config';
+import { ToggleSwitchModule } from 'primeng/toggleswitch';
 
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrl: 'dashboard.component.scss',
-  imports: [ButtonModule, AvatarModule],
+  imports: [ButtonModule, AvatarModule, ToggleSwitchModule],
 })
-export class DashboardComponent {
+export class DashboardComponent implements AfterViewInit {
   public items: MenuItem[] = [
     { label: 'New', icon: 'pi pi-plus' },
     { label: 'Search', icon: 'pi pi-search' },
   ];
 
-  constructor() {
-    const config = inject(PRIME_NG_CONFIG);
-    console.log('Current theme:', config.theme);
-    setTimeout(() => {
-      document.documentElement.classList.toggle('dark');
+  public isDark = signal(false);
 
-      const isDarkMode = document.documentElement.classList.contains('dark');
-      console.log('Dark mode?', isDarkMode);
-    }, 2000);
+  public onThemeClick(): void {
+    document.documentElement.classList.toggle('pos-dark');
+    this._updateTheme();
+  }
+
+  public ngAfterViewInit(): void {
+    this._updateTheme();
+  }
+
+  private _updateTheme(): void {
+    const isDark = document.documentElement.classList.contains('pos-dark');
+    this.isDark.set(isDark);
   }
 }
