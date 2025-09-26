@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { MenuModule } from 'primeng/menu';
 
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrl: 'dashboard.component.scss',
-  imports: [MenuModule],
+  imports: [],
 })
 export class DashboardComponent {
   public items: MenuItem[] = [
