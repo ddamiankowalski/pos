@@ -11,13 +11,16 @@
         [style]="{ 'background-color': '#ece9fc', color: '#2a1261' }"
       />
 
-      <div class="flex flex-col overflow-hidden">
-        <p class="text-primary-50 text-ellipsis overflow-hidden">
-          Joanna Izydorczyk
-        </p>
-        <p class="text-primary-100 text-sm text-ellipsis overflow-hidden">
-          joanna.izyydorczyk@gmail.com
-        </p>
+      <div class="flex overflow-hidden">
+        <div class="flex flex-col overflow-hidden">
+          <p class="text-primary-50 text-ellipsis overflow-hidden">
+            Joanna Izydorczyk
+          </p>
+          <p class="text-primary-200 text-sm text-ellipsis overflow-hidden">
+            joanna.izyydorczyk@gmail.com
+          </p>
+        </div>
+        <p-button icon="pi pi-ellipsis-v" [rounded]="true" [text]="true" />
       </div>
     </div>
 
@@ -44,7 +47,7 @@
   </div>
 
   <!-- Content -->
-  <div class="flex-1 p-6 overflow-auto bg-neutral-50 text-primary-900">
+  <div class="flex-1 p-6 overflow-auto bg-surface-0 text-text">
     <p>
       On mobile, the sidebar is hidden, so this content takes full width. On
       larger screens (md+), the sidebar appears with fixed width.

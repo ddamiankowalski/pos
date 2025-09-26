@@ -8,7 +8,7 @@ import { appRoutes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-import Aura from '@primeuix/themes/aura';
+import ThemePreset from './theme-preset';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(appRoutes),
     provideZonelessChangeDetection(),
     provideAnimationsAsync(),
-    providePrimeNG({ theme: { preset: Aura } }),
+    providePrimeNG({ theme: { preset: ThemePreset } }),
   ],
 };
