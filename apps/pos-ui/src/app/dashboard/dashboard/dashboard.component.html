@@ -1,14 +1,33 @@
 <div class="flex h-screen">
   <!-- Sidebar -->
   <div class="hidden md:block w-80 bg-primary-500 text-primary-50 p-4">
-    Sidebar
+    <div
+      class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
+    >
+      <i class="pi pi-home mr-1" style="font-size: 1rem"></i>
+      Dashboard
+    </div>
+    <div
+      class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
+    >
+      <i class="pi pi-bookmark mr-1" style="font-size: 1rem"></i>
+
+      Bookmarks
+    </div>
+    <div
+      class="w-full py-2 px-4 rounded-lg cursor-pointer transition hover:bg-primary-600"
+    >
+      <i class="pi pi-users mr-1" style="font-size: 1rem"></i>
+
+      Team
+    </div>
   </div>
 
   <!-- Content -->
   <div class="flex-1 p-6 overflow-auto bg-neutral-50 text-primary-900">
     <p>
-      On mobile, the sidebar is hidden, so this content takes full width.
-      On larger screens (md+), the sidebar appears with fixed width.
+      On mobile, the sidebar is hidden, so this content takes full width. On
+      larger screens (md+), the sidebar appears with fixed width.
     </p>
   </div>
 </div>
