@@ -4,12 +4,19 @@ import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { FormsModule } from '@angular/forms';
+import { FacilitiesComponent } from '../facilities/facilities.component';
 
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrl: 'dashboard.component.scss',
-  imports: [ButtonModule, AvatarModule, ToggleSwitchModule, FormsModule],
+  imports: [
+    ButtonModule,
+    AvatarModule,
+    ToggleSwitchModule,
+    FormsModule,
+    FacilitiesComponent,
+  ],
 })
 export class DashboardComponent implements AfterViewInit {
   public items: MenuItem[] = [
