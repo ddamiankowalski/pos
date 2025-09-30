@@ -6,6 +6,8 @@ import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { FormsModule } from '@angular/forms';
 import { FacilitiesComponent } from '../facilities/facilities.component';
 import { SplitterModule } from 'primeng/splitter';
+import { InputTextModule } from 'primeng/inputtext';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @Component({
   selector: 'pos-dashboard',
@@ -18,6 +20,8 @@ import { SplitterModule } from 'primeng/splitter';
     FormsModule,
     FacilitiesComponent,
     SplitterModule,
+    InputTextModule,
+    FloatLabelModule,
   ],
 })
 export class DashboardComponent implements AfterViewInit {

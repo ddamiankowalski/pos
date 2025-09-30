@@ -71,16 +71,13 @@
   </div>
 
   <!-- Splitter Layout -->
-  <p-splitter [style]="{ height: 'calc(100vh - 6rem)' }" class="mb-8">
+  <p-splitter [minSizes]="[30]" [style]="{ height: 'calc(100vh - 6rem)' }" class="mb-8">
     <!-- Left Panel: Search / Filters -->
     <ng-template #panel>
       <div class="flex flex-col h-full p-4">
-        <h2 class="text-lg font-medium mb-4">Szukaj</h2>
-        <input
-          type="text"
-          placeholder="Wyszukaj obiekty..."
-          class="w-full p-2 border rounded-lg mb-4"
-        />
+        <p-floatlabel>
+            <input class="w-full" [pSize]="'small'" pInputText placeholder="Szukaj..." autocomplete="off" />
+        </p-floatlabel>
         <!-- Additional filters or list items can go here -->
       </div>
     </ng-template>
