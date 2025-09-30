@@ -52,10 +52,14 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "pos-ui:build:production"
+          "buildTarget": "pos-ui:build:production",
+          "host": "0.0.0.0",
+          "port": 4200
         },
         "development": {
-          "buildTarget": "pos-ui:build:development"
+          "buildTarget": "pos-ui:build:development",
+          "host": "0.0.0.0",
+          "port": 4200
         }
       },
       "defaultConfiguration": "development"
