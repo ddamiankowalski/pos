@@ -7,9 +7,22 @@
   <i class="pi pi-bars"></i>
 </div>
 
+@if(isOpen()) {
 <div
-  [ngClass]="isOpen() ? 'h-[calc(100vh-84px)]' : 'h-0'"
-  class="flex absolute left-0 top-[83px] w-screen md:h-auto md:relative md:w-auto md:top-0 flex-col gap-4 bg-primary-500 z-10 overflow-hidden transition-all duration-150"
+  (click)="isOpen.set(false)"
+  (keydown)="isOpen.set(false)"
+  tabindex="-1"
+  class="fixed md:hidden bg-black opacity-60 w-full h-full top-0 left-0 z-10"
+></div>
+}
+
+<div
+  [ngClass]="
+    isOpen()
+      ? 'translate-x-0 md:translate-x-0'
+      : '-translate-x-full md:translate-x-0'
+  "
+  class="flex flex-col py-4 min-w-[20rem] md:min-w-0 fixed top-0 left-0 h-screen w-auto md:h-auto md:relative gap-4 bg-primary-500 z-10 transition-transform duration-300"
 >
   <div class="flex flex-col px-3">
     <span class="md:hidden lg:block text-xs mb-2 text-primary-300">MODUŁY</span>
