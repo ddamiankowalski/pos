@@ -1,0 +1,63 @@
+<!-- Sidebar -->
+<div
+  class="h-4 md:h-[100%] md:flex flex-col w-20 lg:w-80 bg-primary-500 gap-4 text-primary-50 p-2 font-medium"
+>
+  <!-- User -->
+  <div class="flex gap-3 items-center mt-4 mb-4">
+    <p-avatar
+      class="flex justify-center items-center ml-3 min-w-[3rem] lg:min-w-[3rem]"
+      label="P"
+      size="large"
+      [style]="{ 'background-color': '#ece9fc', color: '#2a1261' }"
+    ></p-avatar>
+
+    <div class="flex-col overflow-hidden hidden lg:flex">
+      <p class="text-primary-50 text-ellipsis overflow-hidden">
+        Joanna Izydorczyk
+      </p>
+      <p class="text-primary-200 text-sm text-ellipsis overflow-hidden">
+        joanna.izyydorczyk@gmail.com
+      </p>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="flex flex-col px-3">
+    <span class="text-xs mb-2 text-primary-300 hidden lg:block">MODUŁY</span>
+
+    <div class="flex flex-col">
+      <div
+        class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center justify-center lg:justify-start gap-2"
+      >
+        <i class="pi pi-home text-lg"></i>
+        <span class="hidden lg:inline">Obiekty</span>
+      </div>
+      <div
+        class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center justify-center lg:justify-start gap-2"
+      >
+        <i class="pi pi-bookmark text-lg"></i>
+        <span class="hidden lg:inline">Moje rezerwacje</span>
+      </div>
+      <div
+        class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center justify-center lg:justify-start gap-2"
+      >
+        <i class="pi pi-users text-lg"></i>
+        <span class="hidden lg:inline">Znajomi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="flex flex-col px-3">
+    <span class="text-xs mb-2 text-primary-300 hidden lg:block"
+      >USTAWIENIA</span
+    >
+
+    <div class="flex gap-2 items-center justify-center lg:justify-start">
+      <p-toggleswitch [ngModel]="isDark()" (onChange)="onThemeClick()" />
+      <span class="text-sm text-primary-100 hidden lg:inline">{{
+        isDark() ? 'Ciemny' : 'Jasny'
+      }}</span>
+    </div>
+  </div>
+</div>

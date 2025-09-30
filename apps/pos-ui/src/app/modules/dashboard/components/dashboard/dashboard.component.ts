@@ -1,12 +1,11 @@
-import { AfterViewInit, Component, signal } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
-import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { FormsModule } from '@angular/forms';
 import { SplitterModule } from 'primeng/splitter';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'pos-dashboard',
@@ -15,32 +14,11 @@ import { FloatLabelModule } from 'primeng/floatlabel';
   imports: [
     ButtonModule,
     AvatarModule,
-    ToggleSwitchModule,
     FormsModule,
     SplitterModule,
     InputTextModule,
     FloatLabelModule,
+    MenuComponent,
   ],
 })
-export class DashboardComponent implements AfterViewInit {
-  public items: MenuItem[] = [
-    { label: 'New', icon: 'pi pi-plus' },
-    { label: 'Search', icon: 'pi pi-search' },
-  ];
-
-  public isDark = signal(false);
-
-  public onThemeClick(): void {
-    document.documentElement.classList.toggle('pos-dark');
-    this._updateTheme();
-  }
-
-  public ngAfterViewInit(): void {
-    this._updateTheme();
-  }
-
-  private _updateTheme(): void {
-    const isDark = document.documentElement.classList.contains('pos-dark');
-    this.isDark.set(isDark);
-  }
-}
+export class DashboardComponent {}
