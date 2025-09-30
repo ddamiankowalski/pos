@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MenuItem } from 'primeng/api';
-import { MenuUserComponent } from '../menu-user/menu-user.component';
-import { MenuItemsComponent } from '../menu-items/menu-items.component';
+import { ToggleSwitch } from 'primeng/toggleswitch';
 
 @Component({
-  selector: 'pos-menu',
-  templateUrl: 'menu.component.html',
-  imports: [MenuUserComponent, MenuItemsComponent],
+  selector: 'pos-menu-items',
+  templateUrl: 'menu-items.component.html',
+  imports: [ToggleSwitch, FormsModule],
 })
-export class MenuComponent implements AfterViewInit {
+export class MenuItemsComponent implements AfterViewInit {
   public items: MenuItem[] = [
     { label: 'New', icon: 'pi pi-plus' },
     { label: 'Search', icon: 'pi pi-search' },
