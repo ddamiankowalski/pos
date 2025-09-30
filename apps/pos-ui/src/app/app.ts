@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 
 @Component({
   selector: 'pos-root',
