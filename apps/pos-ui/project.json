@@ -54,12 +54,14 @@
         "production": {
           "buildTarget": "pos-ui:build:production",
           "host": "0.0.0.0",
-          "port": 4200
+          "port": 65525
         },
         "development": {
           "buildTarget": "pos-ui:build:development",
           "host": "0.0.0.0",
-          "port": 4200
+          "port": 65525,
+          "open": true,
+          "ssl": true
         }
       },
       "defaultConfiguration": "development"
