@@ -8,7 +8,6 @@ import { FacilitiesComponent } from '../facilities/facilities.component';
 import { SplitterModule } from 'primeng/splitter';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
-import { GoogleMap } from '@angular/google-maps';
 
 @Component({
   selector: 'pos-dashboard',
@@ -23,7 +22,6 @@ import { GoogleMap } from '@angular/google-maps';
     SplitterModule,
     InputTextModule,
     FloatLabelModule,
-    GoogleMap,
   ],
 })
 export class DashboardComponent implements AfterViewInit {

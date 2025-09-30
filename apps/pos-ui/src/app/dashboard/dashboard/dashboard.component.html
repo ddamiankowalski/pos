@@ -64,18 +64,16 @@
   </div>
 
   <!-- Content -->
-  <div class="flex-1 overflow-auto bg-surface-0 text-text">
+  <div class="flex-1 flex flex-col text-text">
     <!-- Header -->
-    <div class="flex items-center shadow-xl w-full h-24 px-6">
+    <div
+      class="flex items-center shadow-xl w-full h-24 px-6 border-b border-surface"
+    >
       <h1 class="text-2xl font-semibold">Obiekty</h1>
     </div>
 
     <!-- Splitter Layout -->
-    <p-splitter
-      [minSizes]="[30]"
-      [style]="{ height: 'calc(100vh - 6rem)' }"
-      class="mb-8"
-    >
+    <p-splitter [minSizes]="[30]" [style]="{ height: '100%', border: 'none' }">
       <!-- Left Panel: Search / Filters -->
       <ng-template #panel>
         <div class="flex flex-col h-full p-4">
@@ -94,8 +92,8 @@
 
       <!-- Right Panel: Map -->
       <ng-template #panel>
-        <div class="flex items-center justify-center h-full bg-gray-100">
-          <google-map></google-map>
+        <div class="flex items-center justify-center h-full">
+          <!-- <google-map height="500px" width="100%"></google-map> -->
         </div>
       </ng-template>
     </p-splitter>
