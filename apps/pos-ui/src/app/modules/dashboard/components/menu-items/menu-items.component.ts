@@ -7,6 +7,9 @@ import { ToggleSwitch } from 'primeng/toggleswitch';
   selector: 'pos-menu-items',
   templateUrl: 'menu-items.component.html',
   imports: [ToggleSwitch, FormsModule],
+  host: {
+    class: 'flex md:flex-col gap-6',
+  },
 })
 export class MenuItemsComponent implements AfterViewInit {
   public items: MenuItem[] = [
