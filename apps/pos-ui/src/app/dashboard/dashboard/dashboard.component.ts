@@ -5,6 +5,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { FormsModule } from '@angular/forms';
 import { FacilitiesComponent } from '../facilities/facilities.component';
+import { SplitterModule } from 'primeng/splitter';
 
 @Component({
   selector: 'pos-dashboard',
@@ -16,6 +17,7 @@ import { FacilitiesComponent } from '../facilities/facilities.component';
     ToggleSwitchModule,
     FormsModule,
     FacilitiesComponent,
+    SplitterModule,
   ],
 })
 export class DashboardComponent implements AfterViewInit {

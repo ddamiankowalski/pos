@@ -64,7 +64,34 @@
   </div>
 
   <!-- Content -->
-  <div class="flex-1 p-6 overflow-auto bg-surface-0 text-text">
-    <pos-facilities />
+<div class="flex-1 overflow-auto bg-surface-0 text-text">
+  <!-- Header -->
+  <div class="flex items-center shadow-xl w-full h-24 px-6">
+    <h1 class="text-2xl font-semibold">Obiekty</h1>
   </div>
+
+  <!-- Splitter Layout -->
+  <p-splitter [style]="{ height: 'calc(100vh - 6rem)' }" class="mb-8">
+    <!-- Left Panel: Search / Filters -->
+    <ng-template #panel>
+      <div class="flex flex-col h-full p-4">
+        <h2 class="text-lg font-medium mb-4">Szukaj</h2>
+        <input
+          type="text"
+          placeholder="Wyszukaj obiekty..."
+          class="w-full p-2 border rounded-lg mb-4"
+        />
+        <!-- Additional filters or list items can go here -->
+      </div>
+    </ng-template>
+
+    <!-- Right Panel: Map -->
+    <ng-template #panel>
+      <div class="flex items-center justify-center h-full bg-gray-100">
+        <!-- Map will be placed here -->
+        <span class="text-gray-500">Mapa (placeholder)</span>
+      </div>
+    </ng-template>
+  </p-splitter>
+</div>
 </div>
