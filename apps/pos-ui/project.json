@@ -12,7 +12,7 @@
       "options": {
         "outputPath": "dist/apps/pos-ui",
         "browser": "apps/pos-ui/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/pos-ui/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
