@@ -7,11 +7,11 @@
     <pos-dashboard-header />
 
     <!-- Tabela zamówień -->
-    <p-splitter [minSizes]="[30]" [style]="{ height: '100%', border: 'none' }">
+    <p-splitter class="overflow-hidden h-full border-none" [minSizes]="[30]">
       <ng-template #panel>
-        <div class="flex-1 h-full p-4 overflow-auto">
+        <div class="flex-1 h-full p-4 flex flex-col overflow-hidden">
           <!-- Pasek wyszukiwania -->
-          <div class="mb-4">
+          <div class="mb-4 flex-shrink-0">
             <span class="p-input-icon-left w-full">
               <input
                 pInputText
@@ -27,13 +27,14 @@
           <p-table
             #dt
             [value]="orders"
-            [paginator]="true"
             [rows]="10"
             [rowsPerPageOptions]="[5, 10, 20]"
             [globalFilterFields]="['id', 'client', 'status', 'total']"
-            class="w-full"
+            [scrollable]="true"
+            scrollHeight="flex"
+            class="w-full flex-1"
           >
-            <ng-template pTemplate="header">
+            <ng-template #header>
               <tr>
                 <th class="flex flex-nowrap" pSortableColumn="id">
                   ID <p-sortIcon field="id"></p-sortIcon>
@@ -47,6 +48,7 @@
                 <th pSortableColumn="total">
                   Kwota <p-sortIcon field="total"></p-sortIcon>
                 </th>
+                <th style="width: 5rem"></th>
               </tr>
             </ng-template>
 
@@ -56,6 +58,9 @@
                 <td>{{ order.client }}</td>
                 <td>{{ order.status }}</td>
                 <td>{{ order.total | currency : 'PLN' }}</td>
+                <td>
+                  <p-button icon="pi pi-trash" severity="secondary" rounded />
+                </td>
               </tr>
             </ng-template>
           </p-table>
