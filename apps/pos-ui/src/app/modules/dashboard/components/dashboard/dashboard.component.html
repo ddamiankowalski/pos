@@ -6,29 +6,62 @@
     <!-- Header -->
     <pos-dashboard-header />
 
-    <!-- Splitter Layout -->
+    <!-- Tabela zamówień -->
     <p-splitter [minSizes]="[30]" [style]="{ height: '100%', border: 'none' }">
-      <!-- Left Panel: Search / Filters -->
       <ng-template #panel>
-        <div class="flex flex-col h-full p-4">
-          <p-floatlabel>
-            <input
-              class="w-full"
-              [pSize]="'small'"
-              pInputText
-              placeholder="Szukaj..."
-              autocomplete="off"
-            />
-          </p-floatlabel>
-        </div>
-      </ng-template>
+        <div class="flex-1 h-full p-4 overflow-auto">
+          <!-- Pasek wyszukiwania -->
+          <div class="mb-4">
+            <span class="p-input-icon-left w-full">
+              <input
+                pInputText
+                type="text"
+                placeholder="Szukaj..."
+                (input)="applyGlobalFilter($event)"
+                class="w-full"
+              />
+            </span>
+          </div>
 
-      <!-- Right Panel: Map -->
-      <ng-template #panel>
-        <div class="flex items-center justify-center h-full">
-          <!-- <google-map height="500px" width="100%"></google-map> -->
+          <!-- PrimeNG Table -->
+          <p-table
+            #dt
+            [value]="orders"
+            [paginator]="true"
+            [rows]="10"
+            [rowsPerPageOptions]="[5, 10, 20]"
+            [globalFilterFields]="['id', 'client', 'status', 'total']"
+            class="w-full"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th class="flex flex-nowrap" pSortableColumn="id">
+                  ID <p-sortIcon field="id"></p-sortIcon>
+                </th>
+                <th pSortableColumn="client">
+                  Klient <p-sortIcon field="client"></p-sortIcon>
+                </th>
+                <th pSortableColumn="status">
+                  Status <p-sortIcon field="status"></p-sortIcon>
+                </th>
+                <th pSortableColumn="total">
+                  Kwota <p-sortIcon field="total"></p-sortIcon>
+                </th>
+              </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-order>
+              <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.client }}</td>
+                <td>{{ order.status }}</td>
+                <td>{{ order.total | currency : 'PLN' }}</td>
+              </tr>
+            </ng-template>
+          </p-table>
         </div>
       </ng-template>
+      <ng-template #panel></ng-template>
     </p-splitter>
   </div>
 </div>

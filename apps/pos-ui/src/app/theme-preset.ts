@@ -30,36 +30,6 @@ const ThemePreset = definePreset(Aura, {
       900: '{slate.900}',
       950: '{slate.950}',
     },
-    colorScheme: {
-      light: {
-        primary: {
-          color: '{emerald.950}',
-          inverseColor: '#ffffff',
-          hoverColor: '{emerald.900}',
-          activeColor: '{emerald.800}',
-        },
-        highlight: {
-          background: '{emerald.950}',
-          focusBackground: '{emerald.700}',
-          color: '#ffffff',
-          focusColor: '#ffffff',
-        },
-      },
-      dark: {
-        primary: {
-          color: '{emerald.50}',
-          inverseColor: '{emerald.950}',
-          hoverColor: '{emerald.100}',
-          activeColor: '{emerald.200}',
-        },
-        highlight: {
-          background: 'rgba(250, 250, 250, .16)',
-          focusBackground: 'rgba(250, 250, 250, .24)',
-          color: 'rgba(255,255,255,.87)',
-          focusColor: 'rgba(255,255,255,.87)',
-        },
-      },
-    },
   },
 });
 
