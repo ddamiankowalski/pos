@@ -6,67 +6,74 @@
     <!-- Header -->
     <pos-dashboard-header />
 
-    <!-- Tabela zamówień -->
-    <p-splitter class="overflow-hidden h-full border-none" [minSizes]="[30]">
-      <ng-template #panel>
-        <div class="flex-1 h-full p-4 flex flex-col overflow-hidden">
-          <!-- Pasek wyszukiwania -->
-          <div class="mb-4 flex-shrink-0">
-            <span class="p-input-icon-left w-full">
-              <input
-                pInputText
-                type="text"
-                placeholder="Szukaj..."
-                (input)="applyGlobalFilter($event)"
-                class="w-full"
-              />
-            </span>
-          </div>
+    <div class="m-4 flex flex-col flex-1 shadow-md rounded-lg overflow-hidden">
+      <p-tabs value="0" class="flex flex-col flex-1">
+        <p-tablist>
+          <p-tab value="0" class="flex items-center !gap-2 text-inherit">
+            <i class="pi pi-cart-plus"></i>Dodaj zamówienie
+          </p-tab>
+          <p-tab value="1" class="flex items-center !gap-2 text-inherit">
+            <i class="pi pi-list"></i>Wszystkie zamówienia
+          </p-tab>
+        </p-tablist>
 
-          <!-- PrimeNG Table -->
-          <p-table
-            #dt
-            [value]="orders"
-            [rows]="10"
-            [rowsPerPageOptions]="[5, 10, 20]"
-            [globalFilterFields]="['id', 'client', 'status', 'total']"
-            [scrollable]="true"
-            scrollHeight="flex"
-            class="w-full flex-1"
-          >
-            <ng-template #header>
-              <tr>
-                <th class="flex flex-nowrap" pSortableColumn="id">
-                  ID <p-sortIcon field="id"></p-sortIcon>
-                </th>
-                <th pSortableColumn="client">
-                  Klient <p-sortIcon field="client"></p-sortIcon>
-                </th>
-                <th pSortableColumn="status">
-                  Status <p-sortIcon field="status"></p-sortIcon>
-                </th>
-                <th pSortableColumn="total">
-                  Kwota <p-sortIcon field="total"></p-sortIcon>
-                </th>
-                <th style="width: 5rem"></th>
-              </tr>
-            </ng-template>
+        <p-tabpanels class="flex flex-col">
+          <p-tabpanel value="0" class="flex flex-col">
+            <div class="flex flex-wrap my-4 gap-4">
+              @for(item of [1, 2, 3, 4, 5]; track item) {
+              <div
+                class="bg-content-bg rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex overflow-hidden w-full max-w-[32rem] h-[10rem]"
+              >
+                <!-- Left side: image/background -->
+                <div class="w-2/5 bg-gray-300 bg-center bg-cover">
+                  <!-- Placeholder background -->
+                </div>
 
-            <ng-template pTemplate="body" let-order>
-              <tr>
-                <td>{{ order.id }}</td>
-                <td>{{ order.client }}</td>
-                <td>{{ order.status }}</td>
-                <td>{{ order.total | currency : 'PLN' }}</td>
-                <td>
-                  <p-button icon="pi pi-trash" severity="secondary" rounded />
-                </td>
-              </tr>
-            </ng-template>
-          </p-table>
-        </div>
-      </ng-template>
-      <ng-template #panel></ng-template>
-    </p-splitter>
+                <!-- Right side: content -->
+                <div class="w-3/5 p-4 flex flex-col justify-between">
+                  <!-- Title -->
+                  <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-semibold">Margarita</h3>
+
+                    <div class="flex gap-6">
+                      <div class="flex flex-col">
+                        <div class="text-sm text-gray-600">Cena</div>
+                        <div class="font-medium">23zł</div>
+                      </div>
+                      <div class="flex flex-col">
+                        <div
+                          class="text-sm text-gray-600 text-ellipsis overflow-hidden text-nowrap"
+                        >
+                          Dziś sprzedanych
+                        </div>
+                        <div class="font-medium">10</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Button section -->
+                  <div class="flex justify-end">
+                    <p-button
+                      label="Dodaj"
+                      size="small"
+                      class="w-full"
+                      styleClass="w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+              }
+            </div>
+
+            <!-- Button at the bottom -->
+            <p-button
+              class="w-[100%]"
+              label="Dodaj zamówienie"
+              styleClass="w-full"
+            />
+          </p-tabpanel>
+        </p-tabpanels>
+      </p-tabs>
+    </div>
   </div>
 </div>

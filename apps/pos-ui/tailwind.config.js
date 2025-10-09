@@ -10,4 +10,11 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   plugins: [PrimeUI],
+    theme: {
+    extend: {
+      backgroundColor: {
+        'content-bg': 'var(--p-content-background)',
+      },
+    },
+  },
 };

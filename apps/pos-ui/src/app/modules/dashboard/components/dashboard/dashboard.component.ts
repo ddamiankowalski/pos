@@ -1,24 +1,26 @@
 import { Component } from '@angular/core';
-import { Splitter } from 'primeng/splitter';
-import { InputText } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { MenuComponent } from '../menu/menu.component';
 import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
-import { CurrencyPipe } from '@angular/common';
 import { Button } from 'primeng/button';
+import { Tabs, TabList, Tab, TabPanel, TabPanels } from 'primeng/tabs';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrl: 'dashboard.component.scss',
   imports: [
-    Splitter,
-    InputText,
     MenuComponent,
     DashboardHeaderComponent,
     TableModule,
-    CurrencyPipe,
     Button,
+    Tabs,
+    TabList,
+    Tab,
+    CardModule,
+    TabPanel,
+    TabPanels,
   ],
 })
 export class DashboardComponent {
