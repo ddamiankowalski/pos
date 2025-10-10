@@ -27,7 +27,7 @@ export class MenuItemsComponent implements AfterViewInit {
   }
 
   public onThemeClick(): void {
-    document.documentElement.classList.toggle('pos-dark');
+    document.documentElement.classList.toggle('dark');
     this._updateTheme();
   }
 
@@ -36,7 +36,7 @@ export class MenuItemsComponent implements AfterViewInit {
   }
 
   private _updateTheme(): void {
-    const isDark = document.documentElement.classList.contains('pos-dark');
+    const isDark = document.documentElement.classList.contains('dark');
     this.isDark.set(isDark);
   }
 }
