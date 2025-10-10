@@ -6,6 +6,8 @@ import { CardModule } from 'primeng/card';
 import { Button } from 'primeng/button';
 import { ButtonGroup } from 'primeng/buttongroup';
 import { MenuItem } from 'primeng/api';
+import { TagModule } from 'primeng/tag';
+
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
@@ -17,6 +19,7 @@ import { MenuItem } from 'primeng/api';
     CardModule,
     Button,
     ButtonGroup,
+    TagModule,
   ],
 })
 export class DashboardComponent {
