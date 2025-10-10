@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { TableModule } from 'primeng/table';
 import { MenuComponent } from '../menu/menu.component';
 import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
@@ -7,6 +7,7 @@ import { Button } from 'primeng/button';
 import { ButtonGroup } from 'primeng/buttongroup';
 import { MenuItem } from 'primeng/api';
 import { TagModule } from 'primeng/tag';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'pos-dashboard',
@@ -20,9 +21,12 @@ import { TagModule } from 'primeng/tag';
     Button,
     ButtonGroup,
     TagModule,
+    DialogModule,
   ],
 })
 export class DashboardComponent {
+  public visible = signal(false);
+
   items: MenuItem[] = [
     { label: 'Electronics' },
     { label: 'Computer' },

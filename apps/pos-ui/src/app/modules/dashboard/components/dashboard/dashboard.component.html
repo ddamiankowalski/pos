@@ -101,7 +101,12 @@
               </div>
               <div class="flex gap-2">
                 <p-buttongroup class="text-nowrap">
-                  <p-button label="Dodaj" icon="pi pi-plus" size="small" />
+                  <p-button
+                    (onClick)="visible.set(true)"
+                    label="Dodaj"
+                    icon="pi pi-plus"
+                    size="small"
+                  />
                   <p-button
                     label="Edytuj"
                     icon="pi pi-trash"
@@ -154,3 +159,12 @@
     </div>
   </div>
 </div>
+
+<p-dialog
+  header="Edit Profile"
+  [modal]="true"
+  [(visible)]="visible"
+  [style]="{ width: '25rem' }"
+>
+  hmm
+</p-dialog>
