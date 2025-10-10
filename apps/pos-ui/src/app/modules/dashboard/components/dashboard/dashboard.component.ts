@@ -5,7 +5,7 @@ import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.c
 import { CardModule } from 'primeng/card';
 import { Button } from 'primeng/button';
 import { ButtonGroup } from 'primeng/buttongroup';
-
+import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
@@ -20,6 +20,16 @@ import { ButtonGroup } from 'primeng/buttongroup';
   ],
 })
 export class DashboardComponent {
+  items: MenuItem[] = [
+    { label: 'Electronics' },
+    { label: 'Computer' },
+    { label: 'Accessories' },
+    { label: 'Keyboard' },
+    { label: 'Wireless' },
+  ];
+
+  home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };
+
   products: any[] = [
     {
       id: '1000',
