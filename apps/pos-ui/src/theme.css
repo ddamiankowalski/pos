@@ -38,8 +38,8 @@
   --warn: var(--p-orange-100);
   --warn-dark: var(--p-orange-400);
 
-  --error: var(--p-red-100);
-  --error-dark: var(--p-red-500);
+  --error: var(--p-red-50);
+  --error-dark: var(--p-red-700);
 
   --shadow-sm: var(--p-shadow-sm);
   --shadow-md: var(--p-shadow-md);
@@ -88,8 +88,9 @@
   --warn: var(--p-orange-200);
   --warn-dark: var(--p-orange-500);
 
-  --error: var(--p-red-100);
+  --error: var(--p-red-50);
   --error-dark: var(--p-red-500);
+  --p-tag-danger-color: var(--error-dark);
 
   --shadow-sm: var(--p-shadow-sm);
   --shadow-md: var(--p-shadow-md);
