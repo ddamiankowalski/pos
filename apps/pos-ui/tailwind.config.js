@@ -50,9 +50,12 @@ module.exports = {
         },
         // Status colors
         success: 'var(--success)',
+        'success-dark': 'var(--success-dark)',
         info: 'var(--info)',
         warn: 'var(--warn)',
+        'warn-dark': 'var(--warn-dark)',
         error: 'var(--error)',
+        'error-dark': 'var(--error-dark)',
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
