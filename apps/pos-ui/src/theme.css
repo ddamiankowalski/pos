@@ -35,8 +35,8 @@
   --success: var(--p-green-100);
   --success-dark: var(--p-green-500);
 
-  --warn: var(--p-orange-100);
-  --warn-dark: var(--p-orange-400);
+  --warn: var(--p-orange-50);
+  --warn-dark: var(--p-orange-700);
 
   --error: var(--p-red-50);
   --error-dark: var(--p-red-700);
@@ -85,8 +85,9 @@
   --success: var(--p-green-100);
   --success-dark: var(--p-green-500);
 
-  --warn: var(--p-orange-200);
-  --warn-dark: var(--p-orange-500);
+  --warn: var(--p-orange-100);
+  --warn-dark: var(--p-orange-700);
+  --p-tag-warn-color: var(--warn-dark);
 
   --error: var(--p-red-50);
   --error-dark: var(--p-red-500);
