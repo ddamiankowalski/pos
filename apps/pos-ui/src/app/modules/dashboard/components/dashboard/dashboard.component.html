@@ -17,7 +17,9 @@
           [value]="products"
         >
           <ng-template #caption>
-            <div class="flex justify-between items-center">
+            <div
+              class="flex flex-col items-start md:flex-row md:items-center justify-between"
+            >
               <div class="flex flex-col justify-center align-between mb-4">
                 <span class="text-xl font-bold">Mieszkańcy</span>
                 <p class="text-surface-500">
@@ -26,74 +28,24 @@
                 </p>
               </div>
               <div class="flex gap-2">
-                <p-button label="Dodaj" icon="pi pi-plus" size="small" />
-                <p-button
-                  label="Usuń"
-                  icon="pi pi-trash"
-                  severity="warn"
-                  size="small"
-                  [outlined]="true"
-                />
-              </div>
-            </div>
-          </ng-template>
-
-          <ng-template #header>
-            <tr>
-              <th pSortableColumn="fname" class="table-cell">
-                <div class="flex items-center gap-2">
-                  Imię
-                  <p-sortIcon field="fname" />
-                </div>
-              </th>
-              <th pSortableColumn="lname" class="table-cell">
-                <div class="flex items-center gap-2">
-                  Nazwisko
-                  <p-sortIcon field="lname" />
-                </div>
-              </th>
-              <th class="hidden md:table-cell">Adres</th>
-              <th class="hidden lg:table-cell">Akcje</th>
-            </tr>
-          </ng-template>
-
-          <ng-template #body let-product>
-            <tr>
-              <td class="table-cell">{{ product.code }}</td>
-              <td class="table-cell">{{ product.name }}</td>
-              <td class="hidden md:table-cell">{{ product.category }}</td>
-              <td class="hidden lg:table-cell">{{ product.quantity }}</td>
-            </tr>
-          </ng-template>
-        </p-table>
-      </div>
-      <div
-        class="bg-surface-0 dark:bg-surface-50 border border-surface-300 text-text-primary p-3 rounded-md shadow-md flex flex-col flex-1 overflow-hidden"
-      >
-        <p-table
-          [scrollable]="true"
-          scrollHeight="flex"
-          stripedRows
-          [value]="products"
-        >
-          <ng-template #caption>
-            <div class="flex justify-between items-center">
-              <div class="flex flex-col justify-center align-between mb-4">
-                <span class="text-xl font-bold">Mieszkańcy</span>
-                <p class="text-surface-500">
-                  Przeglądaj, dodawaj, edytuj i usuwaj dane wprowadzone na temat
-                  mieszkańców
-                </p>
-              </div>
-              <div class="flex gap-2">
-                <p-button label="Dodaj" icon="pi pi-plus" size="small" />
-                <p-button
-                  label="Usuń"
-                  icon="pi pi-trash"
-                  severity="warn"
-                  size="small"
-                  [outlined]="true"
-                />
+                <p-buttongroup class="text-nowrap">
+                  <p-button label="Dodaj" icon="pi pi-plus" size="small" />
+                  <p-button
+                    label="Edytuj"
+                    icon="pi pi-trash"
+                    severity="primary"
+                    size="small"
+                    [outlined]="true"
+                  />
+                  <p-button
+                    label="Usuń zaznaczone"
+                    icon="pi pi-trash"
+                    severity="primary"
+                    disabled
+                    size="small"
+                    [outlined]="true"
+                  />
+                </p-buttongroup>
               </div>
             </div>
           </ng-template>

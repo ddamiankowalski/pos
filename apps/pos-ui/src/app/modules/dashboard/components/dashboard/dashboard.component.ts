@@ -4,6 +4,7 @@ import { MenuComponent } from '../menu/menu.component';
 import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
 import { CardModule } from 'primeng/card';
 import { Button } from 'primeng/button';
+import { ButtonGroup } from 'primeng/buttongroup';
 
 @Component({
   selector: 'pos-dashboard',
@@ -15,6 +16,7 @@ import { Button } from 'primeng/button';
     TableModule,
     CardModule,
     Button,
+    ButtonGroup,
   ],
 })
 export class DashboardComponent {
