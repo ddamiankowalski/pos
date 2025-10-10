@@ -3,12 +3,19 @@ import { TableModule } from 'primeng/table';
 import { MenuComponent } from '../menu/menu.component';
 import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
 import { CardModule } from 'primeng/card';
+import { Button } from 'primeng/button';
 
 @Component({
   selector: 'pos-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrl: 'dashboard.component.scss',
-  imports: [MenuComponent, DashboardHeaderComponent, TableModule, CardModule],
+  imports: [
+    MenuComponent,
+    DashboardHeaderComponent,
+    TableModule,
+    CardModule,
+    Button,
+  ],
 })
 export class DashboardComponent {
   products: any[] = [
