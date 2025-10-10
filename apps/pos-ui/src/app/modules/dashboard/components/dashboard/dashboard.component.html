@@ -8,53 +8,53 @@
 
     <div class="m-4">
       <div
-        class="bg-surface-0 border border-surface-300 text-text-primary p-3 rounded-md shadow-md"
+        class="bg-surface-0 dark:bg-surface-50 border border-surface-300 text-text-primary p-3 rounded-md shadow-md h-[30rem] flex flex-col"
       >
-        <div>
-          <p-table
-            [paginator]="true"
-            [rows]="5"
-            stripedRows
-            [value]="products"
-            class="block w-full"
-          >
-            <ng-template #caption>
-              <div class="flex flex-col justify-center align-between mb-4">
-                <span class="text-xl font-bold">Mieszkańcy</span>
-                <p>
-                  Przeglądaj, dodawaj, edytuj i usuwaj dane wprowadzone na temat
-                  mieszkańców
-                </p>
-              </div>
-            </ng-template>
-            <ng-template #header>
-              <tr>
-                <th pSortableColumn="fname" class="table-cell">
-                  <div class="flex items-center gap-2">
-                    Imię
-                    <p-sortIcon field="fname" />
-                  </div>
-                </th>
-                <th pSortableColumn="lname" class="table-cell">
-                  <div class="flex items-center gap-2">
-                    Nazwisko
-                    <p-sortIcon field="lname" />
-                  </div>
-                </th>
-                <th class="hidden md:table-cell">Adres</th>
-                <th class="hidden lg:table-cell">Akcje</th>
-              </tr>
-            </ng-template>
-            <ng-template #body let-product>
-              <tr>
-                <td class="table-cell">{{ product.code }}</td>
-                <td class="table-cell">{{ product.name }}</td>
-                <td class="hidden md:table-cell">{{ product.category }}</td>
-                <td class="hidden lg:table-cell">{{ product.quantity }}</td>
-              </tr>
-            </ng-template>
-          </p-table>
-        </div>
+        <p-table
+          [scrollable]="true"
+          scrollHeight="flex"
+          stripedRows
+          [value]="products"
+          class="flex-1"
+        >
+          <ng-template #caption>
+            <div class="flex flex-col justify-center align-between mb-4">
+              <span class="text-xl font-bold">Mieszkańcy</span>
+              <p class="text-surface-500">
+                Przeglądaj, dodawaj, edytuj i usuwaj dane wprowadzone na temat
+                mieszkańców
+              </p>
+            </div>
+          </ng-template>
+
+          <ng-template #header>
+            <tr>
+              <th pSortableColumn="fname" class="table-cell">
+                <div class="flex items-center gap-2">
+                  Imię
+                  <p-sortIcon field="fname" />
+                </div>
+              </th>
+              <th pSortableColumn="lname" class="table-cell">
+                <div class="flex items-center gap-2">
+                  Nazwisko
+                  <p-sortIcon field="lname" />
+                </div>
+              </th>
+              <th class="hidden md:table-cell">Adres</th>
+              <th class="hidden lg:table-cell">Akcje</th>
+            </tr>
+          </ng-template>
+
+          <ng-template #body let-product>
+            <tr>
+              <td class="table-cell">{{ product.code }}</td>
+              <td class="table-cell">{{ product.name }}</td>
+              <td class="hidden md:table-cell">{{ product.category }}</td>
+              <td class="hidden lg:table-cell">{{ product.quantity }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
       </div>
     </div>
   </div>
