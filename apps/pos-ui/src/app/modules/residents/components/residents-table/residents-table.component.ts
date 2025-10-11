@@ -6,6 +6,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectModule } from 'primeng/select';
 import { TableModule } from 'primeng/table';
+import { CardComponent } from '../../../../ui/card/card.component';
 
 @Component({
   selector: 'pos-residents-table',
@@ -19,6 +20,7 @@ import { TableModule } from 'primeng/table';
     InputTextModule,
     FloatLabelModule,
     SelectModule,
+    CardComponent,
   ],
 })
 export class ResidentsTableComponent {
