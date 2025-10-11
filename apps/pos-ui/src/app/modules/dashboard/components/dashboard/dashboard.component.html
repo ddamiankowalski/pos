@@ -161,10 +161,135 @@
 </div>
 
 <p-dialog
-  header="Edit Profile"
+  header="Dodaj nowego mieszkańca"
   [modal]="true"
   [(visible)]="visible"
-  [style]="{ width: '25rem' }"
+  [style]="{ width: '35rem' }"
 >
-  hmm
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col">
+      <h1 class="font-semibold">Podstawowe informacje</h1>
+      <span class="text-sm text-surface-500">
+        Wypełnij podstawowe informacje nt. mieszkańca
+      </span>
+    </div>
+
+    <form class="flex flex-wrap mt-4 gap-4">
+      <p-floatlabel variant="on" class="p-float-label flex-grow">
+        <input
+          pInputText
+          id="firstName"
+          fluidclass="w-full"
+          autocomplete="off"
+        />
+        <label for="firstName">Imię</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on" class="p-float-label flex-grow">
+        <input
+          pInputText
+          id="firstName"
+          fluidclass="w-full"
+          autocomplete="off"
+        />
+        <label for="firstName">Nazwisko</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on" class="p-float-label flex-grow">
+        <input
+          pInputText
+          id="firstName"
+          fluidclass="w-full"
+          autocomplete="off"
+        />
+        <label for="firstName">Wiek</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on" class="p-float-label flex-grow">
+        <input
+          pInputText
+          id="firstName"
+          fluidclass="w-full"
+          autocomplete="off"
+        />
+        <label for="firstName">Narodowość</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on" class="p-float-label flex-grow">
+        <input
+          pInputText
+          id="firstName"
+          fluidclass="w-full"
+          autocomplete="off"
+        />
+        <label for="firstName">Adres</label>
+      </p-floatlabel>
+    </form>
+  </div>
+
+  <div class="flex flex-col gap-4 mt-8">
+    <div class="flex flex-col">
+      <h1 class="font-semibold">Dodatkowe informacje</h1>
+      <span class="text-sm text-surface-500">
+        Wypełnij pozostałe dodatkowe informacje
+      </span>
+    </div>
+
+    <form
+      class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
+    >
+      <p-floatlabel variant="on" class="p-float-label w-full">
+        <input pInputText id="firstName" autocomplete="off" class="w-full" />
+        <label for="firstName">Imię</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on" class="p-float-label w-full">
+        <input pInputText id="firstName" autocomplete="off" class="w-full" />
+        <label for="firstName">Nazwisko</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on" class="p-float-label w-full">
+        <input pInputText id="firstName" autocomplete="off" class="w-full" />
+        <label for="firstName">Wiek</label>
+      </p-floatlabel>
+
+      <p-select
+        tooltip="dupa"
+        [options]="countries"
+        optionLabel="name"
+        [showClear]="true"
+        placeholder="Select a Country"
+        class="p-float-label flex-grow"
+        appendTo="body"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-pl'"
+              style="width: 18px"
+              alt=""
+            />
+            <div>{{ selectedOption.name }}</div>
+          </div>
+        </ng-template>
+        <ng-template let-country #item>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-pl'"
+              style="width: 18px"
+              alt=""
+            />
+            <div>{{ country.name }}</div>
+          </div>
+        </ng-template>
+      </p-select>
+
+      <p-floatlabel variant="on" class="p-float-label w-full">
+        <input pInputText id="firstName" autocomplete="off" class="w-full" />
+        <label for="firstName">Adres</label>
+      </p-floatlabel>
+    </form>
+  </div>
 </p-dialog>

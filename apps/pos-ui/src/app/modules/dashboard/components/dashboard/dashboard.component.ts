@@ -8,6 +8,9 @@ import { ButtonGroup } from 'primeng/buttongroup';
 import { MenuItem } from 'primeng/api';
 import { TagModule } from 'primeng/tag';
 import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { SelectModule } from 'primeng/select';
 
 @Component({
   selector: 'pos-dashboard',
@@ -22,10 +25,28 @@ import { DialogModule } from 'primeng/dialog';
     ButtonGroup,
     TagModule,
     DialogModule,
+    InputTextModule,
+    FloatLabelModule,
+    SelectModule,
   ],
 })
 export class DashboardComponent {
   public visible = signal(false);
+
+  countries: any[] = [
+    { name: 'Australia', code: 'AU' },
+    { name: 'Brazil', code: 'BR' },
+    { name: 'China', code: 'CN' },
+    { name: 'Egypt', code: 'EG' },
+    { name: 'France', code: 'FR' },
+    { name: 'Germany', code: 'DE' },
+    { name: 'India', code: 'IN' },
+    { name: 'Japan', code: 'JP' },
+    { name: 'Spain', code: 'ES' },
+    { name: 'United States', code: 'US' },
+  ];
+
+  selectedCountry: string | undefined;
 
   items: MenuItem[] = [
     { label: 'Electronics' },
