@@ -3,7 +3,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DashboardStore } from '../../store/dashboard.store';
 import { ActivatedRoute } from '@angular/router';
 
-@Directive({})
+@Directive()
 export abstract class DashboardRoute {
   private _dashboard = inject(DashboardStore);
   private _route = inject(ActivatedRoute);
