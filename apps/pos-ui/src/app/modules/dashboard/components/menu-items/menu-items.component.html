@@ -28,13 +28,18 @@
     <span class="md:hidden lg:block text-xs mb-2">MODUŁY</span>
 
     <div class="flex flex-col">
-      @for(module of modules; track module.route) {
+      @for(module of modules; track module.route) { @let isActive =
+      dashboard.title() === module.title;
+
       <div
         (click)="onModuleClick(module)"
         (keydown)="onModuleClick(module)"
         tabindex="0"
         class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center md:justify-center lg:justify-start gap-2"
-        [class.bg-primary-600]="dashboard.title() === module.title"
+        [ngClass]="{
+          'hover:bg-primary-700': isActive,
+          'bg-primary-700': isActive
+        }"
       >
         <i [class]="'text-lg pi pi-' + module.icon"></i>
         <span class="md:hidden lg:inline text-nowrap">{{ module.title }}</span>

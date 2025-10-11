@@ -49,6 +49,7 @@ export class MenuItemsComponent implements AfterViewInit {
 
   public onModuleClick({ route }: Module): void {
     this._router.navigate(['/', route]);
+    this.isOpen.set(false);
   }
 
   public isDark = signal(false);
