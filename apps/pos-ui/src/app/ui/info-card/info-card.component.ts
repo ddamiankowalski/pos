@@ -27,7 +27,7 @@ export class InfoCardComponent {
       case 'error':
         return 'border border-error-dark';
       case 'primary':
-        return 'border border-surface-300';
+        return 'border border-success-dark';
       case 'warn':
         return 'border border-warn-dark';
     }
@@ -40,7 +40,7 @@ export class InfoCardComponent {
       case 'error':
         return 'bg-error';
       case 'primary':
-        return 'bg-surface-0';
+        return 'bg-success';
       case 'warn':
         return 'bg-warn';
     }
@@ -53,20 +53,7 @@ export class InfoCardComponent {
       case 'error':
         return 'text-error-dark';
       case 'primary':
-        return 'text-primary-950 dark:text-primary-100';
-      case 'warn':
-        return 'text-warn-dark';
-    }
-  });
-
-  public descriptionStyle = computed(() => {
-    const type = this.type();
-
-    switch (type) {
-      case 'error':
-        return 'text-error-dark';
-      case 'primary':
-        return 'text-surface-600';
+        return 'text-success-dark';
       case 'warn':
         return 'text-warn-dark';
     }
