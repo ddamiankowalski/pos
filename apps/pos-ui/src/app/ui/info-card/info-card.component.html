@@ -3,13 +3,17 @@
   [ngClass]="[borderStyle(), backgroundStyle()]"
 >
   <div class="flex flex-col">
-    <span class="text-error-dark font-medium text-base">{{ title() }}</span>
-    <div class="text-3xl text-error-dark font-semibold">{{ value() }}</div>
+    <span class="font-medium text-base" [ngClass]="[descriptionStyle()]">{{
+      title()
+    }}</span>
+    <div class="text-3xl font-semibold" [ngClass]="[textStyle()]">
+      {{ value() }}
+    </div>
   </div>
 
   @if(description(); as description) {
   <p-tag
-    severity="danger"
+    [severity]="severity()"
     [icon]="descriptionIcon() ? 'pi ' + descriptionIcon() : ''"
     [value]="description"
     class="flex items-center w-max"

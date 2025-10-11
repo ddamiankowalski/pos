@@ -25,11 +25,11 @@ export class InfoCardComponent {
 
     switch (type) {
       case 'error':
-        return 'border border-error-dark bg-error';
+        return 'border border-error-dark';
       case 'primary':
         return 'border border-surface-300';
       case 'warn':
-        return 'border border-surface-300';
+        return 'border border-warn-dark';
     }
   });
 
@@ -42,7 +42,46 @@ export class InfoCardComponent {
       case 'primary':
         return 'bg-surface-0';
       case 'warn':
-        return 'bg-surface-0';
+        return 'bg-warn';
+    }
+  });
+
+  public textStyle = computed(() => {
+    const type = this.type();
+
+    switch (type) {
+      case 'error':
+        return 'text-error-dark';
+      case 'primary':
+        return 'text-primary-950 dark:text-primary-100';
+      case 'warn':
+        return 'text-warn-dark';
+    }
+  });
+
+  public descriptionStyle = computed(() => {
+    const type = this.type();
+
+    switch (type) {
+      case 'error':
+        return 'text-error-dark';
+      case 'primary':
+        return 'text-surface-600';
+      case 'warn':
+        return 'text-warn-dark';
+    }
+  });
+
+  public severity = computed(() => {
+    const type = this.type();
+
+    switch (type) {
+      case 'error':
+        return 'danger';
+      case 'primary':
+        return 'success';
+      case 'warn':
+        return 'warn';
     }
   });
 }

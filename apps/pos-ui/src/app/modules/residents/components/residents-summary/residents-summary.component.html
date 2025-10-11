@@ -15,27 +15,21 @@
     <pos-info-card
       class="flex-shrink-0 basis-72 md:flex-1"
       title="Zaległości (czynsz, opłaty)"
+      type="error"
       value="24"
       description="12% wszystkich rekordów"
       descriptionIcon="pi-arrow-circle-up"
     />
 
     <!-- Card 3 -->
-    <div
-      class="flex-shrink-0 basis-72 md:flex-1 flex flex-col border border-warn-dark bg-warn text-warn-dark p-3 rounded-md shadow-md justify-between gap-3"
-    >
-      <div class="flex flex-col">
-        <span class="text-warn-dark font-medium text-base">Usterki</span>
-        <div class="text-3xl text-warn-dark font-semibold">24</div>
-      </div>
-
-      <p-tag
-        severity="warn"
-        icon="pi pi-arrow-circle-up"
-        value="12% więcej"
-        class="flex items-center w-max text-warn-dark"
-      />
-    </div>
+    <pos-info-card
+      class="flex-shrink-0 basis-72 md:flex-1"
+      title="Usterki"
+      type="warn"
+      value="12"
+      description="12% wszystkich rekordów"
+      descriptionIcon="pi-arrow-circle-up"
+    />
   </div>
 
   <!-- Fixed gradient shadows (only on mobile) -->
