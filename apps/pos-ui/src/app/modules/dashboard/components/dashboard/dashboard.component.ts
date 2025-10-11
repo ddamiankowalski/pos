@@ -33,6 +33,8 @@ import { SelectModule } from 'primeng/select';
 export class DashboardComponent {
   public visible = signal(false);
 
+  public selectedProducts = signal([] as any);
+
   countries: any[] = [
     { name: 'Australia', code: 'AU' },
     { name: 'Brazil', code: 'BR' },
@@ -60,7 +62,7 @@ export class DashboardComponent {
 
   products: any[] = [
     {
-      id: '1000',
+      id: '10001',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -72,7 +74,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10002',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -84,7 +86,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10003',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -96,7 +98,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10004',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -108,7 +110,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10005',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -120,7 +122,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10006',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -132,7 +134,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10007',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -144,7 +146,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10008',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -156,7 +158,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '10009',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -168,7 +170,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '100012',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
@@ -180,7 +182,7 @@ export class DashboardComponent {
       rating: 5,
     },
     {
-      id: '1000',
+      id: '100013',
       code: 'f230fh0g3',
       name: 'Bamboo Watch',
       description: 'Product Description',
