@@ -2,46 +2,23 @@
   <!-- Scrollable container -->
   <div class="flex overflow-x-auto gap-4 p-4 scrollbar-none">
     <!-- Card 1 -->
-    <div
-      class="flex-shrink-0 basis-72 md:flex-1 flex flex-col border border-surface-300 bg-surface-0 p-4 rounded-md shadow-md justify-between gap-3"
-    >
-      <div class="flex flex-col">
-        <span class="text-surface-500 font-medium text-base"
-          >Liczba mieszkańców</span
-        >
-        <div
-          class="text-3xl text-primary-950 dark:text-primary-100 font-semibold"
-        >
-          352
-        </div>
-      </div>
-
-      <p-tag
-        severity="success"
-        icon="pi pi-arrow-circle-up"
-        value="25% więcej"
-        class="flex items-center w-max"
-      />
-    </div>
+    <pos-info-card
+      class="flex-shrink-0 basis-72 md:flex-1"
+      title="Liczba mieszkańców"
+      type="primary"
+      value="352"
+      description="12% wszystkich rekordów"
+      descriptionIcon="pi-arrow-circle-up"
+    />
 
     <!-- Card 2 -->
-    <div
-      class="flex-shrink-0 basis-72 md:flex-1 flex flex-col border border-error-dark bg-error text-error-dark p-3 rounded-md shadow-md justify-between gap-3"
-    >
-      <div class="flex flex-col">
-        <span class="text-error-dark font-medium text-base"
-          >Zaległości (czynsz, opłaty)</span
-        >
-        <div class="text-3xl text-error-dark font-semibold">24</div>
-      </div>
-
-      <p-tag
-        severity="danger"
-        icon="pi pi-arrow-circle-up"
-        value="12% wszystkich rekordów"
-        class="flex items-center w-max text-error-dark"
-      />
-    </div>
+    <pos-info-card
+      class="flex-shrink-0 basis-72 md:flex-1"
+      title="Zaległości (czynsz, opłaty)"
+      value="24"
+      description="12% wszystkich rekordów"
+      descriptionIcon="pi-arrow-circle-up"
+    />
 
     <!-- Card 3 -->
     <div

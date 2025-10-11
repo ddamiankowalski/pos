@@ -1,0 +1,19 @@
+<div
+  class="flex h-full flex-col text-error-dark p-3 rounded-md shadow-md justify-between gap-3"
+  [ngClass]="[borderStyle(), backgroundStyle()]"
+>
+  <div class="flex flex-col">
+    <span class="text-error-dark font-medium text-base">{{ title() }}</span>
+    <div class="text-3xl text-error-dark font-semibold">{{ value() }}</div>
+  </div>
+
+  @if(description(); as description) {
+  <p-tag
+    severity="danger"
+    [icon]="descriptionIcon() ? 'pi ' + descriptionIcon() : ''"
+    [value]="description"
+    class="flex items-center w-max"
+    [ngClass]="{ 'text-error-dark': type() === 'error' }"
+  />
+  }
+</div>
