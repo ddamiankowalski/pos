@@ -301,12 +301,22 @@
   </div>
 
   <ng-template #footer>
-    <p-button
-      label="Zamknij"
-      [text]="true"
-      severity="primary"
-      (click)="visible.set(false)"
-    />
-    <p-button label="Zapisz" severity="primary" (click)="visible.set(false)" />
+    <div class="flex gap-4 mt-4 w-full">
+      <p-button
+        label="Zamknij"
+        severity="primary"
+        [outlined]="true"
+        (click)="visible.set(false)"
+        class="basis-[100%]"
+        styleClass="w-full"
+      />
+      <p-button
+        label="Zapisz"
+        class="basis-[100%]"
+        severity="primary"
+        (click)="visible.set(false)"
+        styleClass="w-full"
+      />
+    </div>
   </ng-template>
 </p-dialog>
