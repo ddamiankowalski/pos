@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ResidentsSummaryComponent } from '../residents-summary/residents-summary.component';
 import { ResidentsTableComponent } from '../residents-table/residents-table.component';
+import { DashboardRoute } from '../../../dashboard/directives/dashboard-route/dashboard-route.directive';
 
 @Component({
   selector: 'pos-residents',
@@ -16,4 +17,4 @@ import { ResidentsTableComponent } from '../residents-table/residents-table.comp
   `,
   imports: [ResidentsSummaryComponent, ResidentsTableComponent],
 })
-export class ResidentsComponent {}
+export class ResidentsComponent extends DashboardRoute {}

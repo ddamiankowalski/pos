@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { DashboardStore } from '../../store/dashboard.store';
 
 @Component({
   selector: 'pos-dashboard-header',
@@ -7,11 +7,5 @@ import { ActivatedRoute } from '@angular/router';
   imports: [],
 })
 export class DashboardHeaderComponent {
-  private route = inject(ActivatedRoute);
-
-  constructor() {
-    setTimeout(() => {
-      console.log(this.route.snapshot);
-    }, 1000);
-  }
+  public dashboard = inject(DashboardStore);
 }
