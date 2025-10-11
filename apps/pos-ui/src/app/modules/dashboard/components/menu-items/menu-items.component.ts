@@ -34,12 +34,12 @@ export class MenuItemsComponent implements AfterViewInit {
     {
       route: 'workers',
       title: 'Aktualności',
-      icon: 'users',
+      icon: 'sparkles',
     },
     {
       route: 'invoices',
       title: 'Dokumenty',
-      icon: 'receipt',
+      icon: 'file-pdf',
     },
   ];
 

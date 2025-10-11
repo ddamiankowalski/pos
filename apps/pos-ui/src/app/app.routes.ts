@@ -28,6 +28,25 @@ export const appRoutes: Route[] = [
           icon: 'receipt',
         },
       },
+      {
+        path: 'documents',
+        component: FinancesComponent,
+        data: {
+          title: 'Dokumenty',
+          titleDescription: 'Zarządzaj swoimi dokumentami',
+          icon: 'file-pdf',
+        },
+      },
+      {
+        path: 'news',
+        component: FinancesComponent,
+        data: {
+          title: 'Aktualności',
+          titleDescription:
+            'Przeglądaj aktualności i powiadom o nich odpowiednie osoby',
+          icon: 'sparkles',
+        },
+      },
       { path: '**', redirectTo: 'residents' },
     ],
   },
