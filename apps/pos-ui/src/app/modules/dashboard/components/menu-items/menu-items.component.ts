@@ -48,8 +48,12 @@ export class MenuItemsComponent implements AfterViewInit {
   private _router = inject(Router);
 
   public onModuleClick({ route }: Module): void {
-    this._router.navigate(['/', route]);
+    this._router.navigate(['/', 'app', route]);
     this.isOpen.set(false);
+  }
+
+  public onLogoutClick(): void {
+    this._router.navigate(['/', 'login']);
   }
 
   public isDark = signal(false);

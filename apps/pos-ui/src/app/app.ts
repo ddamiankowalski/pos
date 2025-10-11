@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'pos-root',
   standalone: true,
   templateUrl: 'app.html',
-  imports: [DashboardComponent],
+  imports: [RouterOutlet],
 })
 export class App {
   protected title = 'pos-ui';
