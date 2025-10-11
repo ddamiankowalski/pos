@@ -16,7 +16,7 @@ type Module = {
   templateUrl: 'menu-items.component.html',
   imports: [ToggleSwitch, FormsModule, NgClass],
   host: {
-    class: 'flex md:flex-col gap-6',
+    class: 'flex md:flex-col gap-6 flex-grow justify-end',
   },
 })
 export class MenuItemsComponent implements AfterViewInit {
