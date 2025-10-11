@@ -32,7 +32,7 @@ export const DashboardStore = signalStore(
 
       setTimeout(() => {
         patchState(store, { loading: false });
-      }, 1000);
+      }, 250);
     };
 
     return {
