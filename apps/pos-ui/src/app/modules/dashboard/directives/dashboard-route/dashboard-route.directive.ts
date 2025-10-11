@@ -15,8 +15,8 @@ export abstract class DashboardRoute {
   private _updateTitle(): void {
     this._route.data
       .pipe(takeUntilDestroyed())
-      .subscribe(({ title, titleDescription }) =>
-        this._dashboard.setTitle(title, titleDescription)
+      .subscribe(({ title, titleDescription, icon }) =>
+        this._dashboard.setModule(title, titleDescription, icon)
       );
   }
 }

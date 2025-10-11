@@ -1,8 +1,15 @@
 import { NgClass } from '@angular/common';
-import { AfterViewInit, Component, signal } from '@angular/core';
+import { AfterViewInit, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MenuItem } from 'primeng/api';
+import { Router } from '@angular/router';
 import { ToggleSwitch } from 'primeng/toggleswitch';
+import { DashboardStore } from '../../store/dashboard.store';
+
+type Module = {
+  route: string;
+  title: string;
+  icon: string;
+};
 
 @Component({
   selector: 'pos-menu-items',
@@ -13,10 +20,36 @@ import { ToggleSwitch } from 'primeng/toggleswitch';
   },
 })
 export class MenuItemsComponent implements AfterViewInit {
-  public items: MenuItem[] = [
-    { label: 'New', icon: 'pi pi-plus' },
-    { label: 'Search', icon: 'pi pi-search' },
+  public readonly modules: Module[] = [
+    {
+      route: 'residents',
+      title: 'Mieszkańcy',
+      icon: 'bookmark',
+    },
+    {
+      route: 'finances',
+      title: 'Finanse',
+      icon: 'objects-column',
+    },
+    {
+      route: 'workers',
+      title: 'Pracownicy',
+      icon: 'users',
+    },
+    {
+      route: 'invoices',
+      title: 'Faktury',
+      icon: 'receipt',
+    },
   ];
+
+  public dashboard = inject(DashboardStore);
+
+  private _router = inject(Router);
+
+  public onModuleClick({ route }: Module): void {
+    this._router.navigate(['/', route]);
+  }
 
   public isDark = signal(false);
 

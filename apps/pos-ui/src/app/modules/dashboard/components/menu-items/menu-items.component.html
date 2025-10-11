@@ -28,30 +28,18 @@
     <span class="md:hidden lg:block text-xs mb-2">MODUŁY</span>
 
     <div class="flex flex-col">
+      @for(module of modules; track module.route) {
       <div
+        (click)="onModuleClick(module)"
+        (keydown)="onModuleClick(module)"
+        tabindex="0"
         class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center md:justify-center lg:justify-start gap-2"
+        [class.bg-primary-600]="dashboard.title() === module.title"
       >
-        <i class="pi pi-bookmark text-lg"></i>
-        <span class="md:hidden lg:inline text-nowrap">Mieszkańcy</span>
+        <i [class]="'text-lg pi pi-' + module.icon"></i>
+        <span class="md:hidden lg:inline text-nowrap">{{ module.title }}</span>
       </div>
-      <div
-        class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center md:justify-center lg:justify-start gap-2"
-      >
-        <i class="pi pi-objects-column text-lg"></i>
-        <span class="md:hidden lg:inline text-nowrap">Finanse</span>
-      </div>
-      <div
-        class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center md:justify-center lg:justify-start gap-2"
-      >
-        <i class="pi pi-users text-lg"></i>
-        <span class="md:hidden lg:inline text-nowrap">Pracownicy</span>
-      </div>
-      <div
-        class="w-full py-2 px-4 lg:px-4 rounded-lg cursor-pointer transition hover:bg-primary-600 flex items-center md:justify-center lg:justify-start gap-2"
-      >
-        <i class="pi pi-receipt text-lg"></i>
-        <span class="md:hidden lg:inline text-nowrap">Faktury</span>
-      </div>
+      }
     </div>
   </div>
 
