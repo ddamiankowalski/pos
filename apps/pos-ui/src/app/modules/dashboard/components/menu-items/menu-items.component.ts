@@ -24,12 +24,12 @@ export class MenuItemsComponent implements AfterViewInit {
     {
       route: 'residents',
       title: 'Mieszkańcy',
-      icon: 'bookmark',
+      icon: 'user',
     },
     {
       route: 'finances',
       title: 'Finanse',
-      icon: 'objects-column',
+      icon: 'receipt',
     },
     {
       route: 'workers',
