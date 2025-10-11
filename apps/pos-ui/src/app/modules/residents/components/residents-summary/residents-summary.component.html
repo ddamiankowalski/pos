@@ -1,0 +1,71 @@
+<div class="relative w-full">
+  <!-- Scrollable container -->
+  <div class="flex overflow-x-auto gap-4 p-4 scrollbar-none">
+    <!-- Card 1 -->
+    <div
+      class="flex-shrink-0 basis-72 md:flex-1 flex flex-col border border-surface-300 bg-surface-0 p-4 rounded-md shadow-md justify-between gap-3"
+    >
+      <div class="flex flex-col">
+        <span class="text-surface-500 font-medium text-base"
+          >Liczba mieszkańców</span
+        >
+        <div
+          class="text-3xl text-primary-950 dark:text-primary-100 font-semibold"
+        >
+          352
+        </div>
+      </div>
+
+      <p-tag
+        severity="success"
+        icon="pi pi-arrow-circle-up"
+        value="25% więcej"
+        class="flex items-center w-max"
+      />
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="flex-shrink-0 basis-72 md:flex-1 flex flex-col border border-error-dark bg-error text-error-dark p-3 rounded-md shadow-md justify-between gap-3"
+    >
+      <div class="flex flex-col">
+        <span class="text-error-dark font-medium text-base"
+          >Zaległości (czynsz, opłaty)</span
+        >
+        <div class="text-3xl text-error-dark font-semibold">24</div>
+      </div>
+
+      <p-tag
+        severity="danger"
+        icon="pi pi-arrow-circle-up"
+        value="12% wszystkich rekordów"
+        class="flex items-center w-max text-error-dark"
+      />
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      class="flex-shrink-0 basis-72 md:flex-1 flex flex-col border border-warn-dark bg-warn text-warn-dark p-3 rounded-md shadow-md justify-between gap-3"
+    >
+      <div class="flex flex-col">
+        <span class="text-warn-dark font-medium text-base">Usterki</span>
+        <div class="text-3xl text-warn-dark font-semibold">24</div>
+      </div>
+
+      <p-tag
+        severity="warn"
+        icon="pi pi-arrow-circle-up"
+        value="12% więcej"
+        class="flex items-center w-max text-warn-dark"
+      />
+    </div>
+  </div>
+
+  <!-- Fixed gradient shadows (only on mobile) -->
+  <div
+    class="pointer-events-none absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-surface-50 to-transparent md:hidden"
+  ></div>
+  <div
+    class="pointer-events-none absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-surface-50 to-transparent md:hidden"
+  ></div>
+</div>
