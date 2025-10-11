@@ -8,8 +8,9 @@ import { SelectModule } from 'primeng/select';
 import { TableModule } from 'primeng/table';
 
 @Component({
-  selector: 'pos-residents-summary',
+  selector: 'pos-residents-table',
   templateUrl: 'residents-table.component.html',
+  host: { class: 'contents' },
   imports: [
     TableModule,
     ButtonModule,
