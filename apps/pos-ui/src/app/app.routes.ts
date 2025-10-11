@@ -3,6 +3,7 @@ import { ResidentsComponent } from './modules/residents/components/residents/res
 import { FinancesComponent } from './modules/finances/components/finances/finances.component';
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 import { LoginComponent } from './modules/user/components/login/login.component';
+import { NewsComponent } from './modules/news/news.component';
 
 export const appRoutes: Route[] = [
   {
@@ -39,7 +40,7 @@ export const appRoutes: Route[] = [
       },
       {
         path: 'news',
-        component: FinancesComponent,
+        component: NewsComponent,
         data: {
           title: 'Aktualności',
           titleDescription:
