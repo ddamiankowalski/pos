@@ -6,10 +6,18 @@ export const appRoutes: Route[] = [
   {
     path: 'residents',
     component: ResidentsComponent,
+    data: {
+      title: 'Mieszkańcy',
+      titleDescription: 'Tutaj znajdziesz wszystkie dane dotyczące mieszkańców',
+    },
   },
   {
     path: 'finances',
     component: FinancesComponent,
+    data: {
+      title: 'Finanse',
+      titleDescription: 'Zarządzaj finansami spółdzielni',
+    },
   },
   { path: '**', redirectTo: 'residents' },
 ];
