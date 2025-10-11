@@ -9,7 +9,7 @@ export const appRoutes: Route[] = [
     data: {
       title: 'Mieszkańcy',
       titleDescription: 'Tutaj znajdziesz wszystkie dane dotyczące mieszkańców',
-      icon: 'bookmark',
+      icon: 'user',
     },
   },
   {
@@ -18,7 +18,7 @@ export const appRoutes: Route[] = [
     data: {
       title: 'Finanse',
       titleDescription: 'Zarządzaj finansami spółdzielni',
-      icon: 'objects-column',
+      icon: 'receipt',
     },
   },
   { path: '**', redirectTo: 'residents' },

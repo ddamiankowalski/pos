@@ -4,12 +4,14 @@ const initialState: DashboardState = {
   title: '',
   icon: null,
   titleDescription: null,
+  loading: true,
 };
 
 type DashboardState = {
   title: string;
   icon: string | null;
   titleDescription: string | null;
+  loading: boolean;
 };
 
 export const DashboardStore = signalStore(
@@ -26,7 +28,11 @@ export const DashboardStore = signalStore(
       titleDescription: string | null = null,
       icon: string | null = null
     ) => {
-      patchState(store, { title, titleDescription, icon });
+      patchState(store, { title, titleDescription, icon, loading: true });
+
+      setTimeout(() => {
+        patchState(store, { loading: false });
+      }, 1000);
     };
 
     return {
