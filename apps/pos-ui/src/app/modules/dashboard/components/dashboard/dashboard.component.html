@@ -299,4 +299,14 @@
       </p-floatlabel>
     </form>
   </div>
+
+  <ng-template #footer>
+    <p-button
+      label="Zamknij"
+      [text]="true"
+      severity="primary"
+      (click)="visible.set(false)"
+    />
+    <p-button label="Zapisz" severity="primary" (click)="visible.set(false)" />
+  </ng-template>
 </p-dialog>
