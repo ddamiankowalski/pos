@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { DashboardRoute } from '../../../dashboard/directives/dashboard-route/dashboard-route.directive';
 import { CardComponent } from '../../../../ui/card/card.component';
-import { PaginatorModule } from 'primeng/paginator';
 
 @Component({
   selector: 'pos-finances',
