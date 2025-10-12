@@ -49,19 +49,22 @@
       </div>
     </div>
 
-    <p-dataview #dv [value]="news()">
+    <p-dataview #dv [value]="news()" class="block h-[100%] overflow-y-scroll">
       <ng-template #list let-items>
         <div class="grid grid-cols-12 grid-nogutter">
           @for(item of items; track item; let first = $first) {
           <div
-            class="col-span-12 flex items-center gap-2 p-4"
+            class="col-span-12 flex flex-col items-start gap-2 p-4"
             [ngClass]="{
-              'border-t border-surface-200': !first
+              'border-t border-surface-200': true
             }"
           >
-            <p-tag severity="danger">{{ statusLabel(item.status) }}</p-tag>
+            <div class="flex gap-2 items-center">
+              <p-tag severity="danger">{{ statusLabel(item.status) }}</p-tag>
+              <div class="font-semibold">{{ item.title }}</div>
+            </div>
 
-            <div class="font-semibold">{{ item.title }}</div>
+            <span class="text-surface-500 text-sm">{{ item.description }}</span>
           </div>
           }
         </div>
