@@ -11,7 +11,7 @@ import { ButtonGroup } from 'primeng/buttongroup';
     <div class="p-4">
       <pos-card>
         <div
-          class="flex gap-0 flex-col items-start md:gap-4 md:flex-row md:items-center justify-between"
+          class="flex gap-0 px-4 flex-col items-start md:gap-4 md:flex-row md:items-center justify-between"
         >
           <div class="flex flex-col justify-center align-between mb-4">
             <span class="text-xl font-bold">Aktualności</span>
