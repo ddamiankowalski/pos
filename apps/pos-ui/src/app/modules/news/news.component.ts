@@ -4,8 +4,9 @@ import { NewsListComponent } from './components/news-list/news-list.component';
 
 @Component({
   selector: 'pos-news',
+  host: { class: 'h-full overflow-hidden' },
   template: `
-    <div class="p-4">
+    <div class="p-4 h-full">
       <pos-news-list />
     </div>
   `,
