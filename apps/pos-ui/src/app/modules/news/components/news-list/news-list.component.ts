@@ -112,4 +112,17 @@ export class NewsListComponent {
         return 'Zaplanowany';
     }
   }
+
+  public statusSeverity(
+    status: 'published' | 'draft' | 'scheduled'
+  ): 'success' | 'info' | 'warn' {
+    switch (status) {
+      case 'draft':
+        return 'info';
+      case 'published':
+        return 'success';
+      case 'scheduled':
+        return 'warn';
+    }
+  }
 }
