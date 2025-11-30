@@ -51,16 +51,16 @@
       <ng-template #header>
         <tr>
           <th style="width: 4rem"><p-tableHeaderCheckbox /></th>
-          <th pSortableColumn="fname" class="table-cell">
+          <th pSortableColumn="name" class="table-cell">
             <div class="flex items-center gap-2">
-              Imię
-              <p-sortIcon field="fname" />
+              Imię i nazwisko
+              <p-sortIcon field="name" />
             </div>
           </th>
-          <th pSortableColumn="lname" class="table-cell">
+          <th pSortableColumn="address" class="table-cell">
             <div class="flex items-center gap-2">
-              Nazwisko
-              <p-sortIcon field="lname" />
+              Adres
+              <p-sortIcon field="address" />
             </div>
           </th>
           <th class="hidden md:table-cell">Adres</th>
@@ -68,22 +68,22 @@
         </tr>
       </ng-template>
 
-      <ng-template #body let-product>
+      <ng-template #body let-client>
         <tr>
           <td>
-            <p-tableCheckbox [value]="product" />
+            <p-tableCheckbox [value]="client" />
           </td>
           <td class="table-cell">
             <div class="flex gap-4 items-center">
               <div
                 class="h-[1.75rem] w-[1.75rem] rounded-[50%] bg-surface-200"
               ></div>
-              {{ product.code }}
+              {{ client.code }}
             </div>
           </td>
-          <td class="table-cell">{{ product.name }}</td>
-          <td class="hidden md:table-cell">{{ product.category }}</td>
-          <td class="hidden lg:table-cell">{{ product.quantity }}</td>
+          <td class="table-cell">{{ client.name }}</td>
+          <td class="hidden md:table-cell">{{ client.category }}</td>
+          <td class="hidden lg:table-cell">{{ client.quantity }}</td>
         </tr>
       </ng-template>
     </p-table>
@@ -115,7 +115,7 @@
           autocomplete="off"
           class="w-full"
         />
-        <label for="firstName">Imię</label>
+        <label for="firstName">Imię i nazwisko</label>
       </p-floatlabel>
 
       <p-floatlabel variant="on" class="p-float-label w-full">
@@ -177,7 +177,7 @@
     >
       <p-floatlabel variant="on" class="p-float-label w-full">
         <input pInputText id="firstName" autocomplete="off" class="w-full" />
-        <label for="firstName">Imię</label>
+        <label for="firstName">Imię i nazwisko</label>
       </p-floatlabel>
 
       <p-floatlabel variant="on" class="p-float-label w-full">

@@ -1,6 +1,5 @@
 import { Route } from '@angular/router';
 import { ResidentsComponent } from './modules/residents/components/residents/residents.component';
-import { FinancesComponent } from './modules/finances/components/finances/finances.component';
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 import { LoginComponent } from './modules/user/components/login/login.component';
 import { NewsComponent } from './modules/news/news.component';
@@ -18,24 +17,6 @@ export const appRoutes: Route[] = [
           titleDescription:
             'Tutaj znajdziesz wszystkie dane dotyczące klientów',
           icon: 'user',
-        },
-      },
-      {
-        path: 'finances',
-        component: FinancesComponent,
-        data: {
-          title: 'Wiadomości',
-          titleDescription: 'Przeglądaj wszystkie wiadomości',
-          icon: 'envelope',
-        },
-      },
-      {
-        path: 'documents',
-        component: FinancesComponent,
-        data: {
-          title: 'Dokumenty',
-          titleDescription: 'Zarządzaj swoimi dokumentami',
-          icon: 'file-pdf',
         },
       },
       {
