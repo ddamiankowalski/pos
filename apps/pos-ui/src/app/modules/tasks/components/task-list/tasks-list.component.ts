@@ -14,8 +14,8 @@ type NewsItem = {
 };
 
 @Component({
-  selector: 'pos-news-list',
-  templateUrl: 'news-list.component.html',
+  selector: 'pos-tasks-list',
+  templateUrl: 'tasks-list.component.html',
   imports: [
     CardComponent,
     DataViewModule,
@@ -26,7 +26,7 @@ type NewsItem = {
     NgClass,
   ],
 })
-export class NewsListComponent {
+export class TasksListComponent {
   public news = signal<NewsItem[]>([
     {
       status: 'published',
