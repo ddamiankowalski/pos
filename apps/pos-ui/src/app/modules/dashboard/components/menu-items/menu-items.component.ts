@@ -29,7 +29,7 @@ export class MenuItemsComponent implements AfterViewInit {
     {
       route: 'finances',
       title: 'Finanse',
-      icon: 'receipt',
+      icon: 'envelope',
     },
     {
       route: 'news',

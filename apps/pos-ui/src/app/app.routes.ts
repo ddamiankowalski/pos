@@ -24,9 +24,9 @@ export const appRoutes: Route[] = [
         path: 'finances',
         component: FinancesComponent,
         data: {
-          title: 'Finanse',
-          titleDescription: 'Zarządzaj finansami spółdzielni',
-          icon: 'receipt',
+          title: 'Wiadomości',
+          titleDescription: 'Przeglądaj wszystkie wiadomości',
+          icon: 'envelope',
         },
       },
       {
