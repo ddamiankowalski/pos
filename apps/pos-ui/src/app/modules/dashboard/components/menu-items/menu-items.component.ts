@@ -23,7 +23,7 @@ export class MenuItemsComponent implements AfterViewInit {
   public readonly modules: Module[] = [
     {
       route: 'residents',
-      title: 'Mieszkańcy',
+      title: 'Klienci',
       icon: 'user',
     },
     {

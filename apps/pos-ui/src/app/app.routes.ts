@@ -14,9 +14,9 @@ export const appRoutes: Route[] = [
         path: 'residents',
         component: ResidentsComponent,
         data: {
-          title: 'Mieszkańcy',
+          title: 'Klienci',
           titleDescription:
-            'Tutaj znajdziesz wszystkie dane dotyczące mieszkańców',
+            'Tutaj znajdziesz wszystkie dane dotyczące klientów',
           icon: 'user',
         },
       },
