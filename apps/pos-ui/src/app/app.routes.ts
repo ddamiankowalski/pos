@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
-import { ResidentsComponent } from './modules/residents/components/residents/residents.component';
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 import { LoginComponent } from './modules/user/components/login/login.component';
 import { NewsComponent } from './modules/news/news.component';
+import { ClientsComponent } from './modules/clients/components/clients/clients.component';
 
 export const appRoutes: Route[] = [
   {
@@ -10,8 +10,8 @@ export const appRoutes: Route[] = [
     component: DashboardComponent,
     children: [
       {
-        path: 'residents',
-        component: ResidentsComponent,
+        path: 'clients',
+        component: ClientsComponent,
         data: {
           title: 'Klienci',
           titleDescription:

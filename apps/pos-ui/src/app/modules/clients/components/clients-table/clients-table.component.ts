@@ -9,8 +9,8 @@ import { TableModule } from 'primeng/table';
 import { CardComponent } from '../../../../ui/card/card.component';
 
 @Component({
-  selector: 'pos-residents-table',
-  templateUrl: 'residents-table.component.html',
+  selector: 'pos-clients-table',
+  templateUrl: 'clients-table.component.html',
   host: { class: 'contents' },
   imports: [
     TableModule,
@@ -23,7 +23,7 @@ import { CardComponent } from '../../../../ui/card/card.component';
     CardComponent,
   ],
 })
-export class ResidentsTableComponent {
+export class ClientsTableComponent {
   public selectedProducts = signal([] as any);
 
   countries: any[] = [
