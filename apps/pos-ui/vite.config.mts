@@ -24,5 +24,15 @@ export default defineConfig(() => ({
       reportsDirectory: '../../coverage/apps/pos-ui',
       provider: 'v8' as const,
     },
+    pool: 'threads',
+    poolOptions: {
+      threads: {
+        singleThread: false,
+        useAtomics: true,
+      },
+    },
+    maxConcurrency: 5,
+    minThreads: 1,
+    maxThreads: 4,
   },
 }));

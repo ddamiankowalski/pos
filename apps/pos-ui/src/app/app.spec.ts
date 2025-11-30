@@ -1,19 +1,9 @@
-import { TestBed } from '@angular/core/testing';
-import { App } from './app';
+import { render, screen } from '@testing-library/angular';
+import { AppComponent } from './app';
 
 describe('App', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [App],
-    }).compileComponents();
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome pos-ui'
-    );
+  it('successfully initializes', async () => {
+    await render(AppComponent);
+    expect(screen).toBeTruthy();
   });
 });

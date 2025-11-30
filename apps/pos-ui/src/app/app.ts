@@ -7,6 +7,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: 'app.html',
   imports: [RouterOutlet],
 })
-export class App {
+export class AppComponent {
   protected title = 'pos-ui';
 }

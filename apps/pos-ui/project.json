@@ -79,7 +79,8 @@
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/apps/pos-ui"
+        "reportsDirectory": "../../coverage/apps/pos-ui",
+        "watch": true
       }
     },
     "serve-static": {
