@@ -60,7 +60,7 @@
             }"
           >
             <div class="flex gap-2 items-center">
-              <p-tag severity="danger">{{ statusLabel(item.status) }}</p-tag>
+              <p-tag [severity]="statusSeverity(item.status)">{{ statusLabel(item.status) }}</p-tag>
               <div class="font-semibold">{{ item.title }}</div>
             </div>
 
