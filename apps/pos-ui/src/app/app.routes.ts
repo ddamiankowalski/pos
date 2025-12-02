@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/components/dashboard/dashboard.component';
 import { LoginComponent } from './modules/user/components/login/login.component';
-import { NewsComponent } from './modules/news/news.component';
 import { ClientsComponent } from './modules/clients/components/clients/clients.component';
+import { TasksComponent } from './modules/tasks/tasks.component';
 
 export const appRoutes: Route[] = [
   {
@@ -20,12 +20,12 @@ export const appRoutes: Route[] = [
         },
       },
       {
-        path: 'news',
-        component: NewsComponent,
+        path: 'tasks',
+        component: TasksComponent,
         data: {
-          title: 'Aktualności',
+          title: 'Zadania',
           titleDescription:
-            'Przeglądaj aktualności i powiadom o nich odpowiednie osoby',
+            'Przeglądaj zadania i powiadom o nich odpowiednie osoby',
           icon: 'sparkles',
         },
       },

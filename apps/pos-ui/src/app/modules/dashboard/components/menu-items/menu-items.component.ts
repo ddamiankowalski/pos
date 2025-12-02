@@ -27,14 +27,9 @@ export class MenuItemsComponent implements AfterViewInit {
       icon: 'user',
     },
     {
-      route: 'news',
-      title: 'Aktualności',
+      route: 'tasks',
+      title: 'Zadania',
       icon: 'sparkles',
-    },
-    {
-      route: 'documents',
-      title: 'Dokumenty',
-      icon: 'file-pdf',
     },
   ];
 
