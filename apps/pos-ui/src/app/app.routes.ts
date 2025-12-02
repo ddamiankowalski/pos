@@ -29,7 +29,7 @@ export const appRoutes: Route[] = [
           icon: 'sparkles',
         },
       },
-      { path: '**', redirectTo: 'residents' },
+      { path: '**', redirectTo: 'clients' },
     ],
   },
   {

@@ -22,7 +22,7 @@ type Module = {
 export class MenuItemsComponent implements AfterViewInit {
   public readonly modules: Module[] = [
     {
-      route: 'residents',
+      route: 'clients',
       title: 'Klienci',
       icon: 'user',
     },
