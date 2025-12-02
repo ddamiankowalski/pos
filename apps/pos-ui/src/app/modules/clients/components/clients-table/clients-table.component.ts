@@ -8,6 +8,7 @@ import { SelectModule } from 'primeng/select';
 import { TableModule } from 'primeng/table';
 import { CardComponent } from '../../../../ui/card/card.component';
 import { Tag } from 'primeng/tag';
+import { Tooltip } from 'primeng/tooltip';
 
 @Component({
   selector: 'pos-clients-table',
@@ -23,6 +24,7 @@ import { Tag } from 'primeng/tag';
     SelectModule,
     CardComponent,
     Tag,
+    Tooltip,
   ],
 })
 export class ClientsTableComponent {
