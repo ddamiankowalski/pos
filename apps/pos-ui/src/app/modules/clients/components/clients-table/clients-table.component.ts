@@ -7,6 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SelectModule } from 'primeng/select';
 import { TableModule } from 'primeng/table';
 import { CardComponent } from '../../../../ui/card/card.component';
+import { Tag } from 'primeng/tag';
 
 @Component({
   selector: 'pos-clients-table',
@@ -21,6 +22,7 @@ import { CardComponent } from '../../../../ui/card/card.component';
     FloatLabelModule,
     SelectModule,
     CardComponent,
+    Tag,
   ],
 })
 export class ClientsTableComponent {
@@ -41,140 +43,95 @@ export class ClientsTableComponent {
 
   selectedCountry: string | undefined;
 
+  public getSeverity(status: string): string {
+    switch (status) {
+      case 'lead':
+        return 'danger';
+      case 'finished':
+        return 'warn';
+      case 'in_progress':
+        return 'success';
+      case 'ready':
+        return 'secondary';
+    }
+
+    return '';
+  }
+
   public visible = signal(false);
 
-  products: any[] = [
+  clients: any[] = [
     {
-      id: '10001',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '1',
+      name: 'Jan Kowalski',
+      address: 'ul. Główna 12, Warszawa',
+      status: 'lead',
     },
     {
-      id: '10002',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '2',
+      name: 'Anna Nowak',
+      address: 'ul. Lipowa 5, Kraków',
+      status: 'in_progress',
     },
     {
-      id: '10003',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '3',
+      name: 'Piotr Wiśniewski',
+      address: 'ul. Wiosenna 23, Gdańsk',
+      status: 'finished',
     },
     {
-      id: '10004',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '4',
+      name: 'Katarzyna Zielińska',
+      address: 'ul. Słoneczna 7, Wrocław',
+      status: 'ready',
     },
     {
-      id: '10005',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '5',
+      name: 'Michał Lewandowski',
+      address: 'ul. Długa 15, Poznań',
+      status: 'lead',
     },
     {
-      id: '10006',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '6',
+      name: 'Agnieszka Kaczmarek',
+      address: 'ul. Krótka 9, Łódź',
+      status: 'in_progress',
     },
     {
-      id: '10007',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '7',
+      name: 'Tomasz Kamiński',
+      address: 'ul. Polna 18, Szczecin',
+      status: 'finished',
     },
     {
-      id: '10008',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '8',
+      name: 'Magdalena Woźniak',
+      address: 'ul. Modrzewiowa 3, Lublin',
+      status: 'ready',
     },
     {
-      id: '10009',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '9',
+      name: 'Paweł Grabowski',
+      address: 'ul. Jesionowa 11, Białystok',
+      status: 'lead',
     },
     {
-      id: '100012',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '10',
+      name: 'Ewa Pawlak',
+      address: 'ul. Brzozowa 6, Katowice',
+      status: 'in_progress',
     },
     {
-      id: '100013',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
+      id: '11',
+      name: 'Robert Nowicki',
+      address: 'ul. Bukowa 2, Toruń',
+      status: 'finished',
+    },
+    {
+      id: '12',
+      name: 'Joanna Piotrowska',
+      address: 'ul. Grabowa 8, Olsztyn',
+      status: 'ready',
     },
   ];
 }

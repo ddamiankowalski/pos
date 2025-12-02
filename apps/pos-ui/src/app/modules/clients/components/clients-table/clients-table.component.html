@@ -7,7 +7,7 @@
       stripedRows
       dataKey="id"
       [(selection)]="selectedProducts"
-      [value]="products"
+      [value]="clients"
     >
       <ng-template #caption>
         <div
@@ -78,12 +78,35 @@
               <div
                 class="h-[1.75rem] w-[1.75rem] rounded-[50%] bg-surface-200"
               ></div>
-              {{ client.code }}
+              {{ client.name }}
             </div>
           </td>
-          <td class="table-cell">{{ client.name }}</td>
-          <td class="hidden md:table-cell">{{ client.category }}</td>
-          <td class="hidden lg:table-cell">{{ client.quantity }}</td>
+          <td class="table-cell">{{ client.address }}</td>
+          <td class="hidden md:table-cell">
+            <p-tag
+              [value]="client.status"
+              [severity]="getSeverity(client.status)"
+            />
+          </td>
+          <td>
+            <div class="flex gap-2 justify-end">
+              <p-button
+                icon="pi pi-user"
+                severity="secondary"
+                variant="outlined"
+              />
+              <p-button
+                icon="pi pi-user"
+                severity="secondary"
+                variant="outlined"
+              />
+              <p-button
+                icon="pi pi-user"
+                severity="secondary"
+                variant="outlined"
+              />
+            </div>
+          </td>
         </tr>
       </ng-template>
     </p-table>
