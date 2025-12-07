@@ -1,7 +1,7 @@
 <p-dialog
   header="Dodaj nowego klienta"
   [modal]="true"
-  [(visible)]="visible"
+  [visible]="visible()"
   [style]="{ width: '45rem' }"
 >
   <div class="flex flex-col gap-4">
@@ -109,7 +109,7 @@
         label="Zamknij"
         severity="primary"
         [outlined]="true"
-        (click)="visible.set(false)"
+        (onClick)="visible.set(false)"
         class="basis-[100%]"
         styleClass="w-full"
       />

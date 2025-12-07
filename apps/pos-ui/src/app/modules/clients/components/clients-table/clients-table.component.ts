@@ -11,6 +11,7 @@ import { Tooltip } from 'primeng/tooltip';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { ClientsCreateComponent } from '../clients-create/clients-create.component';
+import { ClientsDetailsComponent } from '../clients/clients-details/clients-details.component';
 
 @Component({
   selector: 'pos-clients-table',
@@ -29,6 +30,7 @@ import { ClientsCreateComponent } from '../clients-create/clients-create.compone
     InputIconModule,
     IconFieldModule,
     ClientsCreateComponent,
+    ClientsDetailsComponent,
   ],
 })
 export class ClientsTableComponent {
@@ -52,6 +54,7 @@ export class ClientsTableComponent {
   }
 
   public visible = signal(false);
+  public detailsVisible = signal(false);
 
   clients = [
     {
