@@ -11,6 +11,7 @@ import { Tag } from 'primeng/tag';
 import { Tooltip } from 'primeng/tooltip';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
+import { ClientsCreateComponent } from '../clients-create/clients-create.component';
 
 @Component({
   selector: 'pos-clients-table',
@@ -20,7 +21,6 @@ import { InputIconModule } from 'primeng/inputicon';
     TableModule,
     ButtonModule,
     ButtonGroupModule,
-    DialogModule,
     InputTextModule,
     FloatLabelModule,
     SelectModule,
@@ -29,23 +29,11 @@ import { InputIconModule } from 'primeng/inputicon';
     Tooltip,
     InputIconModule,
     IconFieldModule,
+    ClientsCreateComponent,
   ],
 })
 export class ClientsTableComponent {
   public selectedProducts = signal([] as any);
-
-  countries: any[] = [
-    { name: 'Australia', code: 'AU' },
-    { name: 'Brazil', code: 'BR' },
-    { name: 'China', code: 'CN' },
-    { name: 'Egypt', code: 'EG' },
-    { name: 'France', code: 'FR' },
-    { name: 'Germany', code: 'DE' },
-    { name: 'India', code: 'IN' },
-    { name: 'Japan', code: 'JP' },
-    { name: 'Spain', code: 'ES' },
-    { name: 'United States', code: 'US' },
-  ];
 
   selectedCountry: string | undefined;
 
