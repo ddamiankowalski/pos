@@ -130,4 +130,8 @@ export class ClientsTableComponent {
       status: 'ready',
     },
   ];
+
+  public onDetailsClick(): void {
+    this.detailsVisible.set(true);
+  }
 }
