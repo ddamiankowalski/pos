@@ -77,25 +77,28 @@
         class="p-float-label flex-grow"
         appendTo="body"
       >
-        <ng-template #selectedItem let-selectedOption>
+        <ng-template #selectedItem let-client>
           <div class="flex items-center gap-2">
-            <div>{{ selectedOption.name }}</div>
+            <div>{{ client.name }}</div>
           </div>
         </ng-template>
 
         <ng-template let-client #item>
           <div class="flex items-center gap-2">
-            <p-tag
-              [value]="client.status"
-              [severity]="getSeverity(client.status)"
-            />
+            <div>{{ client.name }}</div>
           </div>
         </ng-template>
       </p-select>
 
       <p-floatlabel variant="on" class="p-float-label w-full">
-        <input pInputText id="firstName" autocomplete="off" class="w-full" />
-        <label for="firstName">Adres</label>
+        <input
+          pInputText
+          id="firstName"
+          autocomplete="off"
+          placeholder="Wybierz forme kontaktu"
+          class="w-full"
+        />
+        <label for="firstName">Sposób kontaktu</label>
       </p-floatlabel>
     </form>
   </div>

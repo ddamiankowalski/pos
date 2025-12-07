@@ -32,7 +32,7 @@ import { ClientsCreateComponent } from '../clients-create/clients-create.compone
   ],
 })
 export class ClientsTableComponent {
-  public selectedProducts = signal([] as any);
+  public selectedProducts = signal([]);
 
   selectedCountry: string | undefined;
 
@@ -53,7 +53,7 @@ export class ClientsTableComponent {
 
   public visible = signal(false);
 
-  clients: any[] = [
+  clients = [
     {
       id: '1',
       name: 'Jan Kowalski',

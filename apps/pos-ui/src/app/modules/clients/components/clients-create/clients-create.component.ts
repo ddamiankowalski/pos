@@ -36,7 +36,7 @@ export class ClientsCreateComponent {
 
   public mask = signal('11-123');
 
-  countries: any[] = [
+  countries = [
     { name: 'Namiar', status: 'lead' },
     { name: 'Zakończony', status: 'finished' },
     { name: 'W trakcie', status: 'in_progress' },
