@@ -1,4 +1,4 @@
-import { Component, input, model } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { Button } from 'primeng/button';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputText } from 'primeng/inputtext';
@@ -6,6 +6,7 @@ import { InputText } from 'primeng/inputtext';
 export type FormField<T = string> = {
   label: string;
   value: T | null;
+  placeholder: string;
   isEditable: boolean;
   type: FieldType;
 };
@@ -21,25 +22,12 @@ export enum FieldType {
   host: { class: 'flex justify-between' },
   imports: [FloatLabel, InputText, Button],
 })
-export class FormFieldComponent<T> {
-  public isEditing = model<boolean>(false);
+export class FormFieldComponent {
+  public isEditing = signal<boolean>(false);
+
+  public field = input.required<FormField>();
 
   public isCreate = input.required<boolean>();
-
-  /**
-   * Indicates whether form field is editable
-   */
-  public isEditable = input.required<boolean>();
-
-  /**
-   * Label to be displayed
-   */
-  public label = input.required<string>();
-
-  /**
-   * Value of the form field
-   */
-  public value = input<T | null>(null);
 
   public onEditClick(): void {
     this.isEditing.update((isEditing) => !isEditing);

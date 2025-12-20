@@ -1,21 +1,29 @@
-@if (isEditing() || isCreate()) {
-<p-floatlabel variant="on" class="p-float-label w-full">
-  <input pInputText id="firstName" fluid autocomplete="off" />
-  <label for="firstName">{{ label() }}</label>
+@let value = field().value; @let isEditable = field().isEditable; @let
+placeholder = field().placeholder; @if (isEditing() || isCreate()) {
+<p-floatlabel variant="on" class="flex-grow">
+  <input
+    [placeholder]="placeholder"
+    pInputText
+    id="firstName"
+    fluid
+    autocomplete="off"
+  />
+  <label for="firstName">{{ field().label }}</label>
 </p-floatlabel>
+
 } @else {
 <div class="flex justify-between items-center">
   <div class="flex flex-col">
-    <h1 class="font-semibold">{{ label() }}</h1>
+    <h1 class="font-semibold">{{ field().label }}</h1>
 
-    @if(value() === null) {
+    @if(value === null) {
     <span class="text-sm text-surface-500 italic">brak informacji</span>
     } @else {
-    <span class="text-sm text-surface-500">{{ value() }}</span>
+    <span class="text-sm text-surface-500">{{ value }}</span>
     }
   </div>
 </div>
-} @if (isEditable() && !isCreate()) {
+} @if (isEditable && !isCreate()) {
 
 <section class="flex gap-1 ml-1 mr-1">
   @if(isEditing()) {
