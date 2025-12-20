@@ -10,6 +10,7 @@ import { SelectModule } from 'primeng/select';
 import { InputMaskModule } from 'primeng/inputmask';
 import { FormsModule } from '@angular/forms';
 import { TagModule } from 'primeng/tag';
+import { FormFieldComponent } from '../../../../../ui/forms/form-field/form-field.component';
 
 @Component({
   selector: 'pos-clients-details',
@@ -29,6 +30,7 @@ import { TagModule } from 'primeng/tag';
     InputMaskModule,
     FormsModule,
     TagModule,
+    FormFieldComponent,
   ],
 })
 export class ClientsDetailsComponent {

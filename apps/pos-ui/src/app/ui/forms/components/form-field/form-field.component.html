@@ -1,0 +1,16 @@
+@if (isEdit()) {
+<p-floatlabel variant="on" class="p-float-label w-full">
+  <input pInputText id="firstName" fluid autocomplete="off" />
+  <label for="firstName">{{ label() }}</label>
+</p-floatlabel>
+} @else {
+<div class="flex flex-col">
+  <h1 class="font-semibold">{{ label() }}</h1>
+
+  @if(value() === null) {
+  <span class="text-sm text-surface-500 italic">brak informacji</span>
+  } @else {
+  <span class="text-sm text-surface-500"> </span>
+  }
+</div>
+}
