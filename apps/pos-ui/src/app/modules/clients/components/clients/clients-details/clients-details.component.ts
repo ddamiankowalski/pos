@@ -40,9 +40,15 @@ export class ClientsDetailsComponent {
   public visible = model(false);
 
   public form: Form = {
-    fields: [
-      { label: 'Imię', value: null },
-      { label: 'Nazwisko', value: null },
+    sections: [
+      {
+        title: 'Podstawowe informacje',
+        description: 'Wypełnij podstawowe informacje',
+        fields: [
+          { label: 'Imię', value: null },
+          { label: 'Nazwisko', value: null },
+        ],
+      },
     ],
   };
 }

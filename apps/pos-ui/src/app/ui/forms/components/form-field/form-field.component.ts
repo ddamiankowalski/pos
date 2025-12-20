@@ -1,4 +1,5 @@
 import { Component, input, model } from '@angular/core';
+import { Button } from 'primeng/button';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputText } from 'primeng/inputtext';
 
@@ -10,7 +11,7 @@ export type FormField<T = string> = {
 @Component({
   selector: 'pos-form-field',
   templateUrl: 'form-field.component.html',
-  imports: [FloatLabel, InputText],
+  imports: [FloatLabel, InputText, Button],
 })
 export class FormFieldComponent<T> {
   public isEdit = model<boolean>(false);

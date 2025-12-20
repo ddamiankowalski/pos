@@ -5,7 +5,11 @@ import {
 } from '../form-field/form-field.component';
 
 export type Form = {
-  fields: FormField[];
+  sections: {
+    title: string;
+    description: string;
+    fields: FormField[];
+  }[];
 };
 
 @Component({

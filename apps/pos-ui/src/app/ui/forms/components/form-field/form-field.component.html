@@ -4,13 +4,23 @@
   <label for="firstName">{{ label() }}</label>
 </p-floatlabel>
 } @else {
-<div class="flex flex-col">
-  <h1 class="font-semibold">{{ label() }}</h1>
+<div class="flex justify-between items-center">
+  <div class="flex flex-col">
+    <h1 class="font-semibold">{{ label() }}</h1>
 
-  @if(value() === null) {
-  <span class="text-sm text-surface-500 italic">brak informacji</span>
-  } @else {
-  <span class="text-sm text-surface-500"> </span>
-  }
+    @if(value() === null) {
+    <span class="text-sm text-surface-500 italic">brak informacji</span>
+    } @else {
+    <span class="text-sm text-surface-500">{{ value() }}</span>
+    }
+  </div>
+  <div>
+    <p-button
+      icon="pi pi-pencil"
+      [rounded]="true"
+      [text]="true"
+      severity="secondary"
+    />
+  </div>
 </div>
 }
