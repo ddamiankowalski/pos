@@ -4,8 +4,6 @@ import { ButtonGroup } from 'primeng/buttongroup';
 import { PaginatorModule } from 'primeng/paginator';
 import { DataViewModule } from 'primeng/dataview';
 import { CardComponent } from '../../../../ui/card/card.component';
-import { Tag } from 'primeng/tag';
-import { NgClass } from '@angular/common';
 
 type NewsItem = {
   title: string;
@@ -22,8 +20,6 @@ type NewsItem = {
     PaginatorModule,
     ButtonModule,
     ButtonGroup,
-    Tag,
-    NgClass,
   ],
 })
 export class TasksListComponent {

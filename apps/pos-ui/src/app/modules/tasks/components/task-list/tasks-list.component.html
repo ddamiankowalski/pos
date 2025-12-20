@@ -1,45 +1,12 @@
-<!-- <pos-card>
-  <div
-    class="flex gap-0 p-4 flex-col items-start md:gap-4 md:flex-row md:items-center justify-between"
-  >
-    <div class="flex flex-col justify-center align-between mb-4">
-      <span class="text-xl font-bold">Aktualności</span>
-      <p class="text-surface-500">
-        Przeglądaj wszystkie aktualności i zobacz które z nich zostały
-        wyświetlone
-      </p>
-    </div>
-    <div class="flex gap-2">
-      <p-buttongroup class="text-nowrap">
-        <p-button label="Dodaj" icon="pi pi-plus" size="small" />
-      </p-buttongroup>
-    </div>
-  </div>
-
-  <div class="flex flex-col">
-    <div class="flex gap- w-full">
-      <div
-        class="flex justify-center items-center w-[10rem] h-[4rem] rounded-md border border-surface-300"
-      >
-        hello
-      </div>
-    </div>
-    <div>rekord</div>
-    <div>rekord</div>
-  </div>
-
-  <p-paginator [totalRecords]="120" appendTo="body" />
-</pos-card> -->
-
 <pos-card>
   <div class="h-full flex flex-col">
     <div
       class="flex gap-0 flex-col p-4 items-start md:gap-4 md:flex-row md:items-center justify-between"
     >
       <div class="flex flex-col justify-center align-between mb-4">
-        <span class="text-xl font-bold">Dodane aktualności</span>
+        <span class="text-xl font-bold">Dodane zadania</span>
         <p class="text-surface-500">
-          Przeglądaj dodane wcześniej aktualności i dodawaj nowe
+          Przeglądaj dodane wcześniej zadania i dodawaj nowe
         </p>
       </div>
       <div class="flex gap-2">
@@ -48,27 +15,5 @@
         </p-buttongroup>
       </div>
     </div>
-
-    <p-dataview #dv [value]="news()" class="block h-[100%] overflow-y-scroll">
-      <ng-template #list let-items>
-        <div class="grid grid-cols-12 grid-nogutter">
-          @for(item of items; track item; let first = $first) {
-          <div
-            class="col-span-12 flex flex-col items-start gap-2 p-4"
-            [ngClass]="{
-              'border-t border-surface-200': true
-            }"
-          >
-            <div class="flex gap-2 items-center">
-              <p-tag [severity]="statusSeverity(item.status)">{{ statusLabel(item.status) }}</p-tag>
-              <div class="font-semibold">{{ item.title }}</div>
-            </div>
-
-            <span class="text-surface-500 text-sm">{{ item.description }}</span>
-          </div>
-          }
-        </div>
-      </ng-template>
-    </p-dataview>
   </div>
 </pos-card>
