@@ -11,7 +11,11 @@
     class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
   >
     @for(field of section.fields; track $index) {
-    <pos-form-field [label]="field.label" [value]="field.value" />
+    <pos-form-field
+      [label]="field.label"
+      [value]="field.value"
+      [isEditable]="field.isEditable"
+    />
     }
   </div>
   }

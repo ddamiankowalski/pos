@@ -6,6 +6,7 @@ import { InputText } from 'primeng/inputtext';
 export type FormField<T = string> = {
   label: string;
   value: T | null;
+  isEditable: boolean;
 };
 
 @Component({
@@ -15,6 +16,11 @@ export type FormField<T = string> = {
 })
 export class FormFieldComponent<T> {
   public isEdit = model<boolean>(false);
+
+  /**
+   * Indicates whether form field is editable
+   */
+  public isEditable = input.required<boolean>();
 
   /**
    * Label to be displayed

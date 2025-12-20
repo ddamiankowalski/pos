@@ -45,8 +45,8 @@ export class ClientsDetailsComponent {
         title: 'Podstawowe informacje',
         description: 'Wypełnij podstawowe informacje',
         fields: [
-          { label: 'Imię', value: null },
-          { label: 'Nazwisko', value: null },
+          { label: 'Imię', value: null, isEditable: false },
+          { label: 'Nazwisko', value: null, isEditable: true },
         ],
       },
     ],

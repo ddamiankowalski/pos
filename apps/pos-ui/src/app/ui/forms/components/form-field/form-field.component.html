@@ -14,13 +14,14 @@
     <span class="text-sm text-surface-500">{{ value() }}</span>
     }
   </div>
-  <div>
-    <p-button
-      icon="pi pi-pencil"
-      [rounded]="true"
-      [text]="true"
-      severity="secondary"
-    />
-  </div>
+
+  @if (isEditable()) {
+  <p-button
+    icon="pi pi-pencil"
+    [rounded]="true"
+    [text]="true"
+    severity="secondary"
+  />
+  }
 </div>
 }
