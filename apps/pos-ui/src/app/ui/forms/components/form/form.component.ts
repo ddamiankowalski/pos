@@ -3,7 +3,7 @@ import {
   FormField,
   FormFieldComponent,
 } from '../form-field/form-field.component';
-
+import { DividerModule } from 'primeng/divider';
 export type Form = {
   sections: {
     title: string;
@@ -15,7 +15,7 @@ export type Form = {
 @Component({
   selector: 'pos-form',
   templateUrl: 'form.component.html',
-  imports: [FormFieldComponent],
+  imports: [FormFieldComponent, DividerModule],
 })
 export class FormComponent {
   public form = input.required<Form>();

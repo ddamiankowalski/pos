@@ -66,13 +66,13 @@ export class ClientsDetailsComponent {
         fields: [
           {
             type: FieldType.Text,
-            label: 'Imię',
+            label: 'Status',
             value: null,
             isEditable: false,
           },
           {
             type: FieldType.Text,
-            label: 'Nazwisko',
+            label: 'Adres',
             value: null,
             isEditable: true,
           },
