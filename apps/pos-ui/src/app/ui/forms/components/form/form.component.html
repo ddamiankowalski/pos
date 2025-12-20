@@ -13,7 +13,7 @@
       class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
     >
       @for(field of section.fields; track $index) {
-      <pos-form-field [isCreate]="form().isCreate" [field]="field" />
+      <pos-form-field [isCreate]="isCreate()" [field]="field" />
       }
     </div>
   </section>

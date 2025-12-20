@@ -5,7 +5,6 @@ import {
 } from '../form-field/form-field.component';
 import { DividerModule } from 'primeng/divider';
 export type Form = {
-  isCreate: boolean;
   sections: {
     title: string;
     description: string;
@@ -19,5 +18,10 @@ export type Form = {
   imports: [FormFieldComponent, DividerModule],
 })
 export class FormComponent {
+  /**
+   * Indicates whether the form is create
+   */
+  public isCreate = input.required<boolean>();
+
   public form = input.required<Form>();
 }
