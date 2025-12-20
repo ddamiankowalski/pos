@@ -14,6 +14,7 @@
     >
       @for(field of section.fields; track $index) {
       <pos-form-field
+        [isCreate]="form().isCreate"
         [label]="field.label"
         [value]="field.value"
         [isEditable]="field.isEditable"

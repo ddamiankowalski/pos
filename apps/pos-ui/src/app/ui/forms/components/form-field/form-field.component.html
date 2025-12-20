@@ -1,4 +1,4 @@
-@if (isEditing()) {
+@if (isEditing() || isCreate()) {
 <p-floatlabel variant="on" class="p-float-label w-full">
   <input pInputText id="firstName" fluid autocomplete="off" />
   <label for="firstName">{{ label() }}</label>
@@ -15,7 +15,7 @@
     }
   </div>
 </div>
-} @if (isEditable()) {
+} @if (isEditable() && !isCreate()) {
 
 <section class="flex gap-1 ml-1 mr-1">
   @if(isEditing()) {

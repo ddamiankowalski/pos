@@ -24,6 +24,8 @@ export enum FieldType {
 export class FormFieldComponent<T> {
   public isEditing = model<boolean>(false);
 
+  public isCreate = input.required<boolean>();
+
   /**
    * Indicates whether form field is editable
    */

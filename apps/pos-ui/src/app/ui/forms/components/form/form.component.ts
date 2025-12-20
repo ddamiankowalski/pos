@@ -5,6 +5,7 @@ import {
 } from '../form-field/form-field.component';
 import { DividerModule } from 'primeng/divider';
 export type Form = {
+  isCreate: boolean;
   sections: {
     title: string;
     description: string;

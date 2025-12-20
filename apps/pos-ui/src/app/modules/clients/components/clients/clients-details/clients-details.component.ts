@@ -41,6 +41,7 @@ export class ClientsDetailsComponent {
   public visible = model(false);
 
   public form: Form = {
+    isCreate: true,
     sections: [
       {
         title: 'Podstawowe informacje',
