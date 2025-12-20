@@ -31,5 +31,7 @@ export class FormModalComponent {
    */
   public visible = model(false);
 
+  public header = input.required<string>();
+
   public form = input.required<Form>();
 }

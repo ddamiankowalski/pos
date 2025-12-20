@@ -1,9 +1,6 @@
-<p-dialog
-  header="Szczegóły klienta"
-  [modal]="true"
+<pos-form-modal
+  [form]="form"
+  [isCreate]="false"
   [(visible)]="visible"
-  [style]="{ width: '45rem' }"
->
-</p-dialog>
-
-<pos-form-modal [form]="form" [isCreate]="false" />
+  header="Szczegóły klienta"
+/>

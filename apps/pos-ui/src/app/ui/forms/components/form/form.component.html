@@ -1,4 +1,9 @@
-<p-dialog>
+<p-dialog
+  [(visible)]="visible"
+  [header]="header()"
+  [modal]="true"
+  [style]="{ width: '45rem' }"
+>
   <form class="flex flex-col gap-14">
     @for (section of form().sections; track section.title) {
     <section class="flex flex-col">
@@ -31,8 +36,11 @@
         class="basis-[100%]"
         styleClass="w-full"
       />
+
+      @let createDisabled = false;
       <p-button
-        label="Zapisz"
+        [label]="isCreate() ? 'Zapisz' : 'Wprowadź zmiany'"
+        [disabled]="isCreate() ? createDisabled : true"
         class="basis-[100%]"
         severity="primary"
         (click)="visible.set(false)"
