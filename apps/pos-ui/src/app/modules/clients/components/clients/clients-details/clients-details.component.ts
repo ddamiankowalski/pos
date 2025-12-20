@@ -10,7 +10,10 @@ import { SelectModule } from 'primeng/select';
 import { InputMaskModule } from 'primeng/inputmask';
 import { FormsModule } from '@angular/forms';
 import { TagModule } from 'primeng/tag';
-import { FormFieldComponent } from '../../../../../ui/forms/form-field/form-field.component';
+import {
+  Form,
+  FormComponent,
+} from '../../../../../ui/forms/components/form/form.component';
 
 @Component({
   selector: 'pos-clients-details',
@@ -30,9 +33,16 @@ import { FormFieldComponent } from '../../../../../ui/forms/form-field/form-fiel
     InputMaskModule,
     FormsModule,
     TagModule,
-    FormFieldComponent,
+    FormComponent,
   ],
 })
 export class ClientsDetailsComponent {
   public visible = model(false);
+
+  public form: Form = {
+    fields: [
+      { label: 'Imię', value: null },
+      { label: 'Nazwisko', value: null },
+    ],
+  };
 }

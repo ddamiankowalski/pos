@@ -2,6 +2,11 @@ import { Component, input, model } from '@angular/core';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputText } from 'primeng/inputtext';
 
+export type FormField<T = string> = {
+  label: string;
+  value: T | null;
+};
+
 @Component({
   selector: 'pos-form-field',
   templateUrl: 'form-field.component.html',
