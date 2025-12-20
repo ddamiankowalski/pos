@@ -18,10 +18,11 @@ export enum FieldType {
 @Component({
   selector: 'pos-form-field',
   templateUrl: 'form-field.component.html',
+  host: { class: 'flex justify-between' },
   imports: [FloatLabel, InputText, Button],
 })
 export class FormFieldComponent<T> {
-  public isEdit = model<boolean>(false);
+  public isEditing = model<boolean>(false);
 
   /**
    * Indicates whether form field is editable
@@ -37,4 +38,13 @@ export class FormFieldComponent<T> {
    * Value of the form field
    */
   public value = input<T | null>(null);
+
+  public onEditClick(): void {
+    this.isEditing.update((isEditing) => !isEditing);
+  }
+
+  public onSaveClick(): void {
+    console.log('save!');
+    this.isEditing.set(false);
+  }
 }

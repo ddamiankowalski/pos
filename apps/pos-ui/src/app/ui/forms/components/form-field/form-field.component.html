@@ -1,4 +1,4 @@
-@if (isEdit()) {
+@if (isEditing()) {
 <p-floatlabel variant="on" class="p-float-label w-full">
   <input pInputText id="firstName" fluid autocomplete="off" />
   <label for="firstName">{{ label() }}</label>
@@ -14,9 +14,20 @@
     <span class="text-sm text-surface-500">{{ value() }}</span>
     }
   </div>
-
-  @if (isEditable()) {
-  <p-button icon="pi pi-pencil" [outlined]="true" severity="secondary" />
-  }
 </div>
+} @if (isEditable()) { @if(isEditing()) {
+<p-button
+  icon="pi pi-check"
+  [outlined]="true"
+  severity="success"
+  (onClick)="onSaveClick()"
+/>
+}
+
+<p-button
+  [icon]="isEditing() ? '' : ''"
+  [outlined]="true"
+  severity="secondary"
+  (onClick)="onEditClick()"
+/>
 }
