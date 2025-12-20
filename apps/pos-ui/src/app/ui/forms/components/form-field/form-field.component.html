@@ -15,19 +15,17 @@
     }
   </div>
 </div>
-} @if (isEditable()) { @if(isEditing()) {
-<p-button
-  icon="pi pi-check"
-  [outlined]="true"
-  severity="success"
-  (onClick)="onSaveClick()"
-/>
-}
+} @if (isEditable()) {
 
-<p-button
-  [icon]="isEditing() ? '' : ''"
-  [outlined]="true"
-  severity="secondary"
-  (onClick)="onEditClick()"
-/>
+<section class="flex gap-1 ml-1 mr-1">
+  @if(isEditing()) {
+  <p-button icon="pi pi-check" severity="primary" (onClick)="onSaveClick()" />
+  } @let icon = isEditing() ? 'times' : 'pencil';
+  <p-button
+    [icon]="'pi pi-' + icon"
+    [outlined]="true"
+    severity="secondary"
+    (onClick)="onEditClick()"
+  />
+</section>
 }
