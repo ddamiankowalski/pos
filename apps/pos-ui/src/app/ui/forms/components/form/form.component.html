@@ -1,22 +1,24 @@
-<form class="flex flex-col gap-4">
+<form class="flex flex-col gap-10">
   @for (section of form().sections; track section.title) {
-  <div class="flex flex-col">
-    <h1 class="font-semibold">{{ section.title }}</h1>
-    <span class="text-sm text-surface-500">
-      {{ section.description }}
-    </span>
-  </div>
+  <section class="flex flex-col gap-4">
+    <div class="flex flex-col">
+      <h1 class="font-semibold">{{ section.title }}</h1>
+      <span class="text-sm text-surface-500">
+        {{ section.description }}
+      </span>
+    </div>
 
-  <div
-    class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
-  >
-    @for(field of section.fields; track $index) {
-    <pos-form-field
-      [label]="field.label"
-      [value]="field.value"
-      [isEditable]="field.isEditable"
-    />
-    }
-  </div>
+    <div
+      class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
+    >
+      @for(field of section.fields; track $index) {
+      <pos-form-field
+        [label]="field.label"
+        [value]="field.value"
+        [isEditable]="field.isEditable"
+      />
+      }
+    </div>
+  </section>
   }
 </form>

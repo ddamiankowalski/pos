@@ -6,7 +6,7 @@
 } @else {
 <div class="flex justify-between items-center">
   <div class="flex flex-col">
-    <h1 class="font-semibold">{{ label() }}</h1>
+    <h1 class="font-medium">{{ label() }}</h1>
 
     @if(value() === null) {
     <span class="text-sm text-surface-500 italic">brak informacji</span>
@@ -16,12 +16,8 @@
   </div>
 
   @if (isEditable()) {
-  <p-button
-    icon="pi pi-pencil"
-    [rounded]="true"
-    [text]="true"
-    severity="secondary"
-  />
+  <p-button icon="pi pi-pencil" [outlined]="true" severity="secondary" />
+
   }
 </div>
 }

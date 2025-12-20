@@ -14,6 +14,7 @@ import {
   Form,
   FormComponent,
 } from '../../../../../ui/forms/components/form/form.component';
+import { FieldType } from '../../../../../ui/forms/components/form-field/form-field.component';
 
 @Component({
   selector: 'pos-clients-details',
@@ -45,8 +46,36 @@ export class ClientsDetailsComponent {
         title: 'Podstawowe informacje',
         description: 'Wypełnij podstawowe informacje',
         fields: [
-          { label: 'Imię', value: null, isEditable: false },
-          { label: 'Nazwisko', value: null, isEditable: true },
+          {
+            type: FieldType.Text,
+            label: 'Imię',
+            value: null,
+            isEditable: false,
+          },
+          {
+            type: FieldType.Text,
+            label: 'Nazwisko',
+            value: null,
+            isEditable: true,
+          },
+        ],
+      },
+      {
+        title: 'Status klienta',
+        description: 'Wypełnij pozostałe dodatkowe informacje',
+        fields: [
+          {
+            type: FieldType.Text,
+            label: 'Imię',
+            value: null,
+            isEditable: false,
+          },
+          {
+            type: FieldType.Text,
+            label: 'Nazwisko',
+            value: null,
+            isEditable: true,
+          },
         ],
       },
     ],

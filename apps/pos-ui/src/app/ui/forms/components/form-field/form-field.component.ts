@@ -7,7 +7,13 @@ export type FormField<T = string> = {
   label: string;
   value: T | null;
   isEditable: boolean;
+  type: FieldType;
 };
+
+export enum FieldType {
+  Text = 'TEXT',
+  Select = 'SELECT',
+}
 
 @Component({
   selector: 'pos-form-field',
