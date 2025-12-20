@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { TagModule } from 'primeng/tag';
 import {
   Form,
-  FormComponent,
+  FormModalComponent,
 } from '../../../../../ui/forms/components/form/form.component';
 import { FieldType } from '../../../../../ui/forms/components/form-field/form-field.component';
 
@@ -34,14 +34,13 @@ import { FieldType } from '../../../../../ui/forms/components/form-field/form-fi
     InputMaskModule,
     FormsModule,
     TagModule,
-    FormComponent,
+    FormModalComponent,
   ],
 })
 export class ClientsDetailsComponent {
   public visible = model(false);
 
   public form: Form = {
-    isCreate: false,
     sections: [
       {
         title: 'Podstawowe informacje',

@@ -1,21 +1,43 @@
-<form class="flex flex-col gap-14">
-  @for (section of form().sections; track section.title) {
-  <section class="flex flex-col">
-    <div class="flex flex-col">
-      <h1 class="font-semibold">{{ section.title }}</h1>
-      <span class="text-sm text-surface-500">
-        {{ section.description }}
-      </span>
-    </div>
-    <p-divider />
+<p-dialog>
+  <form class="flex flex-col gap-14">
+    @for (section of form().sections; track section.title) {
+    <section class="flex flex-col">
+      <div class="flex flex-col">
+        <h1 class="font-semibold">{{ section.title }}</h1>
+        <span class="text-sm text-surface-500">
+          {{ section.description }}
+        </span>
+      </div>
+      <p-divider />
 
-    <div
-      class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
-    >
-      @for(field of section.fields; track $index) {
-      <pos-form-field [isCreate]="isCreate()" [field]="field" />
-      }
+      <div
+        class="grid gap-4 grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]"
+      >
+        @for(field of section.fields; track $index) {
+        <pos-form-field [isCreate]="isCreate()" [field]="field" />
+        }
+      </div>
+    </section>
+    }
+  </form>
+
+  <ng-template #footer>
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 mt-4 w-full">
+      <p-button
+        label="Zamknij"
+        severity="primary"
+        [outlined]="true"
+        (onClick)="visible.set(false)"
+        class="basis-[100%]"
+        styleClass="w-full"
+      />
+      <p-button
+        label="Zapisz"
+        class="basis-[100%]"
+        severity="primary"
+        (click)="visible.set(false)"
+        styleClass="w-full"
+      />
     </div>
-  </section>
-  }
-</form>
+  </ng-template>
+</p-dialog>
