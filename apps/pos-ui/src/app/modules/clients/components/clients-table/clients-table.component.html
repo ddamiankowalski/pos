@@ -7,7 +7,9 @@
       stripedRows
       dataKey="id"
       [(selection)]="selectedProducts"
+      [rows]="10"
       [value]="clients"
+      [paginator]="true"
     >
       <ng-template #caption>
         <div
