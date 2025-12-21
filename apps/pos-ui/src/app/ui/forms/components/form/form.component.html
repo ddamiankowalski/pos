@@ -37,10 +37,11 @@
         styleClass="w-full"
       />
 
-      @let createDisabled = false;
+      @let createDisabled = false; @let editDisabled = !hasEdit();
+
       <p-button
         [label]="isCreate() ? 'Zapisz' : 'Wprowadź zmiany'"
-        [disabled]="isCreate() ? createDisabled : true"
+        [disabled]="isCreate() ? createDisabled : editDisabled"
         class="basis-[100%]"
         severity="primary"
         (click)="visible.set(false)"

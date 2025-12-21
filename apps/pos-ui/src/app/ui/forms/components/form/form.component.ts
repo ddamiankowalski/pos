@@ -1,4 +1,4 @@
-import { Component, input, model } from '@angular/core';
+import { Component, computed, input, model, viewChildren } from '@angular/core';
 import {
   FormField,
   FormFieldComponent,
@@ -34,4 +34,12 @@ export class FormModalComponent {
   public header = input.required<string>();
 
   public form = input.required<Form>();
+
+  public fields = viewChildren(FormFieldComponent);
+
+  public hasEdit = computed(() => {
+    return this.fields()
+      .map((field) => field.isEditing())
+      .some((isEdit) => isEdit === true);
+  });
 }
