@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { ButtonGroup } from 'primeng/buttongroup';
 import { PaginatorModule } from 'primeng/paginator';
 import { DataViewModule } from 'primeng/dataview';
 import { CardComponent } from '../../../../ui/card/card.component';
+import { form } from '@angular/forms/signals';
 
 import {
   CdkDragDrop,
@@ -49,6 +50,13 @@ interface Column {
   ],
 })
 export class TasksListComponent {
+  loginModel = signal({
+    firstName: '',
+    lastName: '',
+  });
+
+  loginForm = form(this.loginModel);
+
   columns: Column[] = [
     {
       id: 'todo',
