@@ -29,6 +29,16 @@ export const appRoutes: Route[] = [
           icon: 'sparkles',
         },
       },
+      {
+        path: 'messages',
+        component: TasksComponent,
+        data: {
+          title: 'Wiadomości',
+          titleDescription:
+            'Przeglądaj wiadomości i powiadom o nich odpowiednie osoby',
+          icon: 'inbox',
+        },
+      },
       { path: '**', redirectTo: 'clients' },
     ],
   },

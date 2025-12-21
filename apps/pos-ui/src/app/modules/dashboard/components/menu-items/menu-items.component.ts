@@ -31,6 +31,11 @@ export class MenuItemsComponent implements AfterViewInit {
       title: 'Zadania',
       icon: 'sparkles',
     },
+    {
+      route: 'messages',
+      title: 'Wiadomości',
+      icon: 'inbox',
+    },
   ];
 
   public dashboard = inject(DashboardStore);
