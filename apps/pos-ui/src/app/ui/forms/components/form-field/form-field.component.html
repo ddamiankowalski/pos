@@ -15,7 +15,7 @@ placeholder = field().placeholder; @if (isEditing() || isCreate()) {
 } @else {
 <div class="flex justify-between items-center">
   <div class="flex flex-col">
-    <h1 class="font-semibold">{{ field().label }}</h1>
+    <h1 class="font-semibold text-sm">{{ field().label }}</h1>
 
     @if(value === null) {
     <span class="text-sm text-surface-500 italic">brak informacji</span>
