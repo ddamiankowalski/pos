@@ -10,8 +10,11 @@ import { Tag } from 'primeng/tag';
 import { Tooltip } from 'primeng/tooltip';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
-import { ClientsCreateComponent } from '../clients-create/clients-create.component';
-import { ClientsDetailsComponent } from '../clients/clients-details/clients-details.component';
+import {
+  Form,
+  FormModalComponent,
+} from '../../../../ui/forms/components/form/form.component';
+import { FieldType } from '../../../../ui/forms/components/form-field/form-field.component';
 
 @Component({
   selector: 'pos-clients-table',
@@ -29,14 +32,72 @@ import { ClientsDetailsComponent } from '../clients/clients-details/clients-deta
     Tooltip,
     InputIconModule,
     IconFieldModule,
-    ClientsCreateComponent,
-    ClientsDetailsComponent,
+    FormModalComponent,
   ],
 })
 export class ClientsTableComponent {
   public selectedProducts = signal([]);
 
   selectedCountry: string | undefined;
+
+  public form: Form = {
+    sections: [
+      {
+        title: 'Podstawowe informacje',
+        description: 'Wypełnij podstawowe informacje',
+        fields: [
+          {
+            type: FieldType.Text,
+            label: 'Imię',
+            value: null,
+            isEditable: false,
+            placeholder: 'Wpisz imie',
+          },
+          {
+            type: FieldType.Text,
+            label: 'Nazwisko',
+            value: null,
+            placeholder: 'Wpisz nazwisko',
+            isEditable: true,
+          },
+          {
+            type: FieldType.Text,
+            label: 'Adres',
+            value: null,
+            placeholder: 'Wpisz adres klienta',
+            isEditable: true,
+          },
+          {
+            type: FieldType.Text,
+            label: 'Kod pocztowy',
+            value: null,
+            placeholder: 'Wpisz kod pocztowy',
+            isEditable: true,
+          },
+        ],
+      },
+      {
+        title: 'Status klienta',
+        description: 'Wypełnij pozostałe dodatkowe informacje',
+        fields: [
+          {
+            type: FieldType.Text,
+            label: 'Status',
+            value: null,
+            isEditable: false,
+            placeholder: 'Wybierz status',
+          },
+          {
+            type: FieldType.Text,
+            label: 'Adres',
+            value: null,
+            placeholder: 'Wpisz adres',
+            isEditable: true,
+          },
+        ],
+      },
+    ],
+  };
 
   public getSeverity(status: string): string {
     switch (status) {
