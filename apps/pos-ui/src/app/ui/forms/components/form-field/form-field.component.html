@@ -4,6 +4,7 @@ placeholder = field().placeholder; @if (isEditing() || isCreate()) {
   <input
     [placeholder]="placeholder"
     pInputText
+    [value]="value"
     id="firstName"
     fluid
     autocomplete="off"

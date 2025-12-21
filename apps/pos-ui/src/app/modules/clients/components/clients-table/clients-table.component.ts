@@ -49,14 +49,14 @@ export class ClientsTableComponent {
           {
             type: FieldType.Text,
             label: 'Imię',
-            value: null,
+            value: 'Damian',
             isEditable: false,
             placeholder: 'Wpisz imie',
           },
           {
             type: FieldType.Text,
             label: 'Nazwisko',
-            value: null,
+            value: 'Kowalski',
             placeholder: 'Wpisz nazwisko',
             isEditable: true,
           },

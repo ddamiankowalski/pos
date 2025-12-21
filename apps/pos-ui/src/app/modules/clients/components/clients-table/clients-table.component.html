@@ -29,13 +29,6 @@
                 size="small"
               />
               <p-button
-                label="Edytuj"
-                icon="pi pi-trash"
-                severity="primary"
-                size="small"
-                [outlined]="true"
-              />
-              <p-button
                 label="Usuń zaznaczone"
                 icon="pi pi-trash"
                 severity="primary"
@@ -120,5 +113,15 @@
   </pos-card>
 </div>
 
-<pos-form-modal header="" [isCreate]="false" [form]="form" />
-<pos-form-modal header="" [isCreate]="false" [form]="form" />
+<pos-form-modal
+  [(visible)]="visible"
+  header="Dodaj nowego klienta"
+  [isCreate]="true"
+  [form]="form"
+/>
+<pos-form-modal
+  [(visible)]="detailsVisible"
+  header="Szczegóły klienta"
+  [isCreate]="false"
+  [form]="form"
+/>
